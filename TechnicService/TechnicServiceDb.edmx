@@ -42,15 +42,23 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="6" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Problem" Type="ntext" Nullable="false" />
           <Property Name="Description" Type="ntext" />
           <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Process" Type="nvarchar" MaxLength="500" />
           <Property Name="Status" Type="bit" Nullable="false" />
           <Property Name="CustomerFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CustomerPhone" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="CustomerPhone" Type="nvarchar" MaxLength="17" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MalfunctionUpdate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="Process" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -111,6 +119,7 @@
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Malfunctions" EntityType="Self.Malfunctions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MalfunctionUpdate" EntityType="Self.MalfunctionUpdate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Revenues" EntityType="Self.Revenues" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -166,11 +175,11 @@
           <Property Name="Problem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Process" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <Property Name="CustomerFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomerLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CustomerPhone" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerPhone" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNo" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -240,7 +249,16 @@
             <End Role="Category" EntitySet="Category" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
+          <EntitySet Name="MalfunctionUpdate" EntityType="Db.MalfunctionUpdate" />
         </EntityContainer>
+        <EntityType Name="MalfunctionUpdate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -285,6 +303,7 @@
           <EntitySetMapping Name="Malfunctions">
             <EntityTypeMapping TypeName="Db.Malfunctions">
               <MappingFragment StoreEntitySet="Malfunctions">
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
                 <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
                 <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
                 <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
@@ -293,7 +312,6 @@
                 <ScalarProperty Name="Problem" ColumnName="Problem" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Process" ColumnName="Process" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -341,6 +359,15 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MalfunctionUpdate">
+            <EntityTypeMapping TypeName="Db.MalfunctionUpdate">
+              <MappingFragment StoreEntitySet="MalfunctionUpdate">
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

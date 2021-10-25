@@ -12,17 +12,10 @@ namespace TechnicService
     using System;
     using System.Collections.Generic;
     
-    public partial class Malfunctions
+    public partial class MalfunctionUpdate
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Problem { get; set; }
-        public string Description { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public bool Status { get; set; }
-        public string CustomerFirstName { get; set; }
-        public string CustomerLastName { get; set; }
-        public string CustomerPhone { get; set; }
         public string SerialNo { get; set; }
+        public string Process { get; set; }
     }
 }

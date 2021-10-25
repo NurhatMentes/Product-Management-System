@@ -36,8 +36,12 @@ namespace TechnicService.Forms
             this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pnlList = new DevExpress.XtraEditors.GroupControl();
+            this.dtList = new DevExpress.XtraGrid.GridControl();
+            this.grdMalfunction = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grpAdd = new DevExpress.XtraEditors.GroupControl();
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnAddMalfunction = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -61,26 +65,34 @@ namespace TechnicService.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grpAdd = new DevExpress.XtraEditors.GroupControl();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.dtList = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grpUpdate = new DevExpress.XtraEditors.GroupControl();
+            this.btnUptated = new DevExpress.XtraEditors.SimpleButton();
+            this.check = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtProcessUptade = new System.Windows.Forms.RichTextBox();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cbxSerialNo = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlList)).BeginInit();
             this.pnlList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMalfunction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAdd)).BeginInit();
+            this.grpAdd.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAdd)).BeginInit();
-            this.grpAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpUpdate)).BeginInit();
+            this.grpUpdate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -119,6 +131,7 @@ namespace TechnicService.Forms
             this.btnUpdate.Size = new System.Drawing.Size(342, 197);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Arıza Güncelle";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnList
             // 
@@ -149,13 +162,49 @@ namespace TechnicService.Forms
             this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlList.Controls.Add(this.grpAdd);
             this.pnlList.Controls.Add(this.dtList);
             this.pnlList.Location = new System.Drawing.Point(12, 43);
             this.pnlList.Name = "pnlList";
             this.pnlList.Size = new System.Drawing.Size(1329, 659);
             this.pnlList.TabIndex = 5;
             this.pnlList.Text = "Arızalı Ürün Listesi";
+            // 
+            // dtList
+            // 
+            this.dtList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtList.Location = new System.Drawing.Point(2, 28);
+            this.dtList.MainView = this.grdMalfunction;
+            this.dtList.Name = "dtList";
+            this.dtList.Size = new System.Drawing.Size(1325, 629);
+            this.dtList.TabIndex = 7;
+            this.dtList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdMalfunction});
+            // 
+            // grdMalfunction
+            // 
+            this.grdMalfunction.GridControl = this.dtList;
+            this.grdMalfunction.Name = "grdMalfunction";
+            this.grdMalfunction.OptionsBehavior.Editable = false;
+            this.grdMalfunction.OptionsBehavior.KeepFocusedRowOnUpdate = false;
+            this.grdMalfunction.OptionsBehavior.KeepGroupExpandedOnSorting = false;
+            this.grdMalfunction.OptionsBehavior.ReadOnly = true;
+            this.grdMalfunction.OptionsNavigation.AutoMoveRowFocus = false;
+            this.grdMalfunction.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.False;
+            this.grdMalfunction.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdMalfunction_FocusedRowChanged);
+            this.grdMalfunction.DoubleClick += new System.EventHandler(this.grdMalfunction_DoubleClick);
+            // 
+            // grpAdd
+            // 
+            this.grpAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpAdd.Controls.Add(this.pnlAdd);
+            this.grpAdd.Location = new System.Drawing.Point(9, 44);
+            this.grpAdd.Name = "grpAdd";
+            this.grpAdd.Size = new System.Drawing.Size(1331, 659);
+            this.grpAdd.TabIndex = 6;
+            this.grpAdd.Text = "Arızalı Ürün Ekleme";
             // 
             // pnlAdd
             // 
@@ -169,7 +218,7 @@ namespace TechnicService.Forms
             this.pnlAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAdd.Location = new System.Drawing.Point(2, 28);
             this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(1325, 629);
+            this.pnlAdd.Size = new System.Drawing.Size(1327, 629);
             this.pnlAdd.TabIndex = 1;
             // 
             // panel1
@@ -189,8 +238,19 @@ namespace TechnicService.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1325, 629);
+            this.panel1.Size = new System.Drawing.Size(1327, 629);
             this.panel1.TabIndex = 14;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textEdit1.Location = new System.Drawing.Point(110, 22);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.textEdit1.Size = new System.Drawing.Size(516, 32);
+            this.textEdit1.TabIndex = 21;
             // 
             // btnAddMalfunction
             // 
@@ -204,7 +264,7 @@ namespace TechnicService.Forms
             this.btnAddMalfunction.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddMalfunction.Location = new System.Drawing.Point(694, 539);
             this.btnAddMalfunction.Name = "btnAddMalfunction";
-            this.btnAddMalfunction.Size = new System.Drawing.Size(269, 73);
+            this.btnAddMalfunction.Size = new System.Drawing.Size(271, 73);
             this.btnAddMalfunction.TabIndex = 16;
             this.btnAddMalfunction.Text = "Ekle";
             this.btnAddMalfunction.Click += new System.EventHandler(this.btnAddMalfunction_Click);
@@ -221,7 +281,7 @@ namespace TechnicService.Forms
             this.groupBox1.Controls.Add(this.txtFirstName);
             this.groupBox1.Location = new System.Drawing.Point(831, 170);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 204);
+            this.groupBox1.Size = new System.Drawing.Size(362, 204);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri Bilgileri";
@@ -231,7 +291,7 @@ namespace TechnicService.Forms
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(-130, 130);
+            this.label13.Location = new System.Drawing.Point(-129, 130);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 24);
             this.label13.TabIndex = 25;
@@ -240,15 +300,14 @@ namespace TechnicService.Forms
             // txtPhone
             // 
             this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPhone.Location = new System.Drawing.Point(-26, 126);
+            this.txtPhone.Location = new System.Drawing.Point(-25, 126);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
             this.txtPhone.Properties.BeepOnError = false;
             this.txtPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtPhone.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtPhone.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            this.txtPhone.Properties.MaskSettings.Set("mask", "d");
+            this.txtPhone.Properties.MaskSettings.Set("mask", "(000) 000-0000");
+            this.txtPhone.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
             this.txtPhone.Size = new System.Drawing.Size(516, 32);
             this.txtPhone.TabIndex = 24;
             // 
@@ -257,7 +316,7 @@ namespace TechnicService.Forms
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(-130, 92);
+            this.label12.Location = new System.Drawing.Point(-129, 92);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 24);
             this.label12.TabIndex = 23;
@@ -266,7 +325,7 @@ namespace TechnicService.Forms
             // txtLastName
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(-26, 88);
+            this.txtLastName.Location = new System.Drawing.Point(-25, 88);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtLastName.Properties.Appearance.Options.UseFont = true;
@@ -279,7 +338,7 @@ namespace TechnicService.Forms
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(-130, 51);
+            this.label11.Location = new System.Drawing.Point(-129, 51);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 24);
             this.label11.TabIndex = 21;
@@ -288,7 +347,7 @@ namespace TechnicService.Forms
             // txtFirstName
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(-26, 47);
+            this.txtFirstName.Location = new System.Drawing.Point(-25, 47);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFirstName.Properties.Appearance.Options.UseFont = true;
@@ -300,7 +359,7 @@ namespace TechnicService.Forms
             // 
             this.txtProcess.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProcess.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtProcess.Location = new System.Drawing.Point(109, 384);
+            this.txtProcess.Location = new System.Drawing.Point(110, 384);
             this.txtProcess.Name = "txtProcess";
             this.txtProcess.Size = new System.Drawing.Size(516, 135);
             this.txtProcess.TabIndex = 12;
@@ -310,7 +369,7 @@ namespace TechnicService.Forms
             // 
             this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescription.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDescription.Location = new System.Drawing.Point(109, 203);
+            this.txtDescription.Location = new System.Drawing.Point(110, 203);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(516, 135);
             this.txtDescription.TabIndex = 11;
@@ -320,7 +379,7 @@ namespace TechnicService.Forms
             // 
             this.txtProblem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProblem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtProblem.Location = new System.Drawing.Point(109, 64);
+            this.txtProblem.Location = new System.Drawing.Point(110, 64);
             this.txtProblem.Name = "txtProblem";
             this.txtProblem.Size = new System.Drawing.Size(516, 135);
             this.txtProblem.TabIndex = 10;
@@ -331,7 +390,7 @@ namespace TechnicService.Forms
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(5, 387);
+            this.label7.Location = new System.Drawing.Point(6, 387);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 24);
             this.label7.TabIndex = 9;
@@ -342,7 +401,7 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(5, 350);
+            this.label8.Location = new System.Drawing.Point(6, 350);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 24);
             this.label8.TabIndex = 7;
@@ -351,7 +410,7 @@ namespace TechnicService.Forms
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrice.Location = new System.Drawing.Point(109, 346);
+            this.txtPrice.Location = new System.Drawing.Point(110, 346);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPrice.Properties.Appearance.Options.UseFont = true;
@@ -368,7 +427,7 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(5, 208);
+            this.label9.Location = new System.Drawing.Point(6, 208);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 24);
             this.label9.TabIndex = 5;
@@ -379,7 +438,7 @@ namespace TechnicService.Forms
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(5, 64);
+            this.label10.Location = new System.Drawing.Point(6, 64);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 24);
             this.label10.TabIndex = 3;
@@ -390,7 +449,7 @@ namespace TechnicService.Forms
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(5, 30);
+            this.label6.Location = new System.Drawing.Point(6, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 24);
             this.label6.TabIndex = 1;
@@ -408,7 +467,7 @@ namespace TechnicService.Forms
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(5, 387);
+            this.label5.Location = new System.Drawing.Point(6, 387);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 24);
             this.label5.TabIndex = 9;
@@ -419,7 +478,7 @@ namespace TechnicService.Forms
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(5, 350);
+            this.label3.Location = new System.Drawing.Point(6, 350);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 7;
@@ -430,7 +489,7 @@ namespace TechnicService.Forms
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(5, 208);
+            this.label4.Location = new System.Drawing.Point(6, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 24);
             this.label4.TabIndex = 5;
@@ -441,7 +500,7 @@ namespace TechnicService.Forms
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(5, 64);
+            this.label2.Location = new System.Drawing.Point(6, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 3;
@@ -452,54 +511,104 @@ namespace TechnicService.Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(5, 30);
+            this.label1.Location = new System.Drawing.Point(6, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "*Başlık";
             // 
-            // grpAdd
-            // 
-            this.grpAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpAdd.Controls.Add(this.pnlAdd);
-            this.grpAdd.Location = new System.Drawing.Point(70, 156);
-            this.grpAdd.Name = "grpAdd";
-            this.grpAdd.Size = new System.Drawing.Size(1329, 659);
-            this.grpAdd.TabIndex = 6;
-            this.grpAdd.Text = "Arızalı Ürün Ekleme";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // textEdit1
+            // grpUpdate
             // 
-            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit1.Location = new System.Drawing.Point(109, 22);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(516, 32);
-            this.textEdit1.TabIndex = 21;
+            this.grpUpdate.Controls.Add(this.btnUptated);
+            this.grpUpdate.Controls.Add(this.check);
+            this.grpUpdate.Controls.Add(this.labelControl3);
+            this.grpUpdate.Controls.Add(this.txtProcessUptade);
+            this.grpUpdate.Controls.Add(this.labelControl2);
+            this.grpUpdate.Controls.Add(this.labelControl1);
+            this.grpUpdate.Controls.Add(this.cbxSerialNo);
+            this.grpUpdate.Location = new System.Drawing.Point(9, 43);
+            this.grpUpdate.Name = "grpUpdate";
+            this.grpUpdate.Size = new System.Drawing.Size(1331, 660);
+            this.grpUpdate.TabIndex = 8;
+            this.grpUpdate.Text = "Arıza Güncelle";
             // 
-            // dtList
+            // btnUptated
             // 
-            this.dtList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtList.Location = new System.Drawing.Point(2, 28);
-            this.dtList.MainView = this.gridView1;
-            this.dtList.Name = "dtList";
-            this.dtList.Size = new System.Drawing.Size(1325, 629);
-            this.dtList.TabIndex = 7;
-            this.dtList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.btnUptated.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUptated.Appearance.Options.UseFont = true;
+            this.btnUptated.Location = new System.Drawing.Point(422, 462);
+            this.btnUptated.Name = "btnUptated";
+            this.btnUptated.Size = new System.Drawing.Size(443, 56);
+            this.btnUptated.TabIndex = 6;
+            this.btnUptated.Text = "Güncelle";
+            this.btnUptated.Click += new System.EventHandler(this.btnUptated_Click);
             // 
-            // gridView1
+            // check
             // 
-            this.gridView1.GridControl = this.dtList;
-            this.gridView1.Name = "gridView1";
+            this.check.Location = new System.Drawing.Point(932, 221);
+            this.check.Name = "check";
+            this.check.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.check.Properties.Appearance.Options.UseFont = true;
+            this.check.Properties.Caption = "Teslim Edildi";
+            this.check.Size = new System.Drawing.Size(203, 28);
+            this.check.TabIndex = 5;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(932, 188);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(60, 24);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "Durum";
+            // 
+            // txtProcessUptade
+            // 
+            this.txtProcessUptade.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtProcessUptade.Location = new System.Drawing.Point(422, 221);
+            this.txtProcessUptade.Name = "txtProcessUptade";
+            this.txtProcessUptade.Size = new System.Drawing.Size(443, 207);
+            this.txtProcessUptade.TabIndex = 3;
+            this.txtProcessUptade.Text = "";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(422, 188);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(49, 24);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "İşlem";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(112, 188);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(112, 24);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Ürün Seri No";
+            // 
+            // cbxSerialNo
+            // 
+            this.cbxSerialNo.Location = new System.Drawing.Point(112, 218);
+            this.cbxSerialNo.Name = "cbxSerialNo";
+            this.cbxSerialNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxSerialNo.Properties.Appearance.Options.UseFont = true;
+            this.cbxSerialNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxSerialNo.Properties.DisplayMember = "SerialNo";
+            this.cbxSerialNo.Properties.NullText = "Seri Numara Seçiniz";
+            this.cbxSerialNo.Properties.ValueMember = "Id";
+            this.cbxSerialNo.Size = new System.Drawing.Size(234, 30);
+            this.cbxSerialNo.TabIndex = 0;
             // 
             // FrmMalfunction
             // 
@@ -507,32 +616,39 @@ namespace TechnicService.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1701, 778);
-            this.Controls.Add(this.pnlList);
+            this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.pnlList);
+            this.Controls.Add(this.grpAdd);
             this.Name = "FrmMalfunction";
             this.Text = "Arızalı Ürünler";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMalfunction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlList)).EndInit();
             this.pnlList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMalfunction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAdd)).EndInit();
+            this.grpAdd.ResumeLayout(false);
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAdd)).EndInit();
-            this.grpAdd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpUpdate)).EndInit();
+            this.grpUpdate.ResumeLayout(false);
+            this.grpUpdate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,6 +688,14 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.SimpleButton btnAddMalfunction;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraGrid.GridControl dtList;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdMalfunction;
+        private DevExpress.XtraEditors.GroupControl grpUpdate;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LookUpEdit cbxSerialNo;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.RichTextBox txtProcessUptade;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton btnUptated;
+        private DevExpress.XtraEditors.CheckEdit check;
     }
 }

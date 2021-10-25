@@ -33,5 +33,6 @@ namespace TechnicService
         public virtual DbSet<Revenues> Revenues { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<MalfunctionUpdate> MalfunctionUpdate { get; set; }
     }
 }

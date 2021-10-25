@@ -6,14 +6,15 @@
     <edmx:Diagrams>
       <Diagram DiagramId="9364ddb5d3044b2593438a1928c38fc3" Name="Diagram1">
         <EntityTypeShape EntityType="Db.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Customers" Width="1.5" PointX="0.875" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Expenses" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Malfunctions" Width="1.5" PointX="4.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Revenues" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.sysdiagrams" Width="1.5" PointX="7" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Users" Width="1.5" PointX="5.875" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Customers" Width="1.5" PointX="1" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Expenses" Width="1.5" PointX="2.875" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Malfunctions" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Products" Width="1.5" PointX="3.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Revenues" Width="1.5" PointX="9.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.sysdiagrams" Width="1.5" PointX="12.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Users" Width="1.5" PointX="10.75" PointY="3.625" IsExpanded="true" />
         <AssociationConnector Association="Db.FK_Products_Category" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Db.MalfunctionUpdate" Width="1.5" PointX="8.125" PointY="1.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
