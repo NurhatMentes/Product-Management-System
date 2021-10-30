@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Validation;
 using System.Drawing;
@@ -127,10 +128,9 @@ namespace TechnicService.Forms
 
         void SerialNoSelection()
         {
-            cbxSerialNo.Properties.DataSource = (from x in _entities.MalfunctionUpdate
+            cbxSerialNo.Properties.DataSource = (from x in _entities.Malfunctions where x.Status==false
                 select new
                 {
-                    x.Id,
                     x.SerialNo
                     
                 }).ToList();
@@ -163,15 +163,23 @@ namespace TechnicService.Forms
             malfunctionUpdate.SerialNo = cbxSerialNo.EditValue.ToString();
             malfunctionUpdate.Process = txtProcessUptade.Text;
             _entities.MalfunctionUpdate.Add(malfunctionUpdate);
-            if (cbxSerialNo.IsDisplayTextValid)
+            //if (cbxSerialNo.IsDisplayTextValid)
+            //{
+            //    var updateEntity = _entities.Malfunctions.Where(x => x.SerialNo == malfunctionUpdate.SerialNo);
+            //    if(updateEntity)
+            //}
+            if (check.Checked)
             {
-                //linq ile ekleme sorgusu yazılacak
+                Malfunctions malfunctions = (from malfunction in _entities.Malfunctions
+                    where malfunction.SerialNo == malfunctionUpdate.SerialNo
+                    select malfunction).SingleOrDefault();
                 malfunctions.Status = true;
-                
-                _entities.Malfunctions.AddOrUpdate(malfunctions);
             }
 
             _entities.SaveChanges();
+
+            MessageBox.Show("Ürün başarı ile Güncellendi", "Başarılı", MessageBoxButtons.OK,
+                MessageBoxIcon.Asterisk);
         }
     }
 }

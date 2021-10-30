@@ -606,7 +606,7 @@ namespace TechnicService.Forms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxSerialNo.Properties.DisplayMember = "SerialNo";
             this.cbxSerialNo.Properties.NullText = "Seri Numara Seçiniz";
-            this.cbxSerialNo.Properties.ValueMember = "Id";
+            this.cbxSerialNo.Properties.ValueMember = "SerialNo";
             this.cbxSerialNo.Size = new System.Drawing.Size(234, 30);
             this.cbxSerialNo.TabIndex = 0;
             // 

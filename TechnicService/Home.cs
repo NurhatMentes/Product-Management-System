@@ -24,7 +24,9 @@ namespace TechnicService
 
         }
 
-        private void btnMalfunction_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+      
+
+        private void btnMalfunctions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (frmMalfunction == null || frmMalfunction.IsDisposed)
             {
@@ -32,7 +34,6 @@ namespace TechnicService
                 frmMalfunction.MdiParent = this;
                 frmMalfunction.Show();
             }
-
         }
     }
 }
