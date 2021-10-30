@@ -35,5 +35,17 @@ namespace TechnicService
                 frmMalfunction.Show();
             }
         }
+
+        private void btnCategoryAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmCategoryAdd categoryAdd = new FrmCategoryAdd();
+            categoryAdd.Show();
+        }
+
+        private void btnCategoryDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmCategoryDelete categoryDelete = new FrmCategoryDelete();
+            categoryDelete.Show();
+        }
     }
 }

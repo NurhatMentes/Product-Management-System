@@ -163,11 +163,7 @@ namespace TechnicService.Forms
             malfunctionUpdate.SerialNo = cbxSerialNo.EditValue.ToString();
             malfunctionUpdate.Process = txtProcessUptade.Text;
             _entities.MalfunctionUpdate.Add(malfunctionUpdate);
-            //if (cbxSerialNo.IsDisplayTextValid)
-            //{
-            //    var updateEntity = _entities.Malfunctions.Where(x => x.SerialNo == malfunctionUpdate.SerialNo);
-            //    if(updateEntity)
-            //}
+
             if (check.Checked)
             {
                 Malfunctions malfunctions = (from malfunction in _entities.Malfunctions
