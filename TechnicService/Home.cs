@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 using TechnicService.Forms;
 
 namespace TechnicService
@@ -48,6 +49,33 @@ namespace TechnicService
         {
             FrmCategoryUpdate categoryUpdate = new FrmCategoryUpdate();
             categoryUpdate.Show();
+        }
+
+        private void btnProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            barProductAdd.Visibility = BarItemVisibility.Always;
+            barProductUpdate.Visibility = BarItemVisibility.Always;
+            FrmProductList frmProductList = new FrmProductList();
+            frmProductList.MdiParent = this;
+            frmProductList.Show();
+        }
+
+        private void barProductUpdate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+        private void barProductAdd_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmProductAdd add = new FrmProductAdd();
+            add.MdiParent = this;
+            add.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            FrmProductList frmProductList = new FrmProductList();
+            frmProductList.MdiParent = this;
+            frmProductList.Show();
         }
     }
 }

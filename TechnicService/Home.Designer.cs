@@ -43,11 +43,14 @@ namespace TechnicService
             this.btnCategoryDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnCategoryUpdate = new DevExpress.XtraBars.BarButtonItem();
             this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
+            this.barProductAdd = new DevExpress.XtraBars.BarButtonItem();
+            this.barProductUpdate = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -74,9 +77,11 @@ namespace TechnicService
             this.btnCategoryAdd,
             this.btnCategoryDelete,
             this.barToggleSwitchItem1,
-            this.btnCategoryUpdate});
+            this.btnCategoryUpdate,
+            this.barProductAdd,
+            this.barProductUpdate});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 18;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -115,6 +120,7 @@ namespace TechnicService
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnProducts.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProducts_ItemClick);
             // 
             // btnCategory
             // 
@@ -162,6 +168,29 @@ namespace TechnicService
             this.barToggleSwitchItem1.Id = 16;
             this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
             // 
+            // barProductAdd
+            // 
+            this.barProductAdd.Caption = "Ürün Ekle";
+            this.barProductAdd.Id = 18;
+            this.barProductAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barProductAdd.ImageOptions.Image")));
+            this.barProductAdd.Name = "barProductAdd";
+            this.barProductAdd.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barProductAdd.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.barProductAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barProductAdd_ItemClick);
+            // 
+            // barProductUpdate
+            // 
+            this.barProductUpdate.Caption = "Ürün Güncelle";
+            this.barProductUpdate.Id = 19;
+            this.barProductUpdate.ImageOptions.Image = global::TechnicService.Properties.Resources.refreshallpivottable_16x161;
+            this.barProductUpdate.ImageOptions.LargeImage = global::TechnicService.Properties.Resources.refreshallpivottable_32x321;
+            this.barProductUpdate.Name = "barProductUpdate";
+            this.barProductUpdate.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barProductUpdate.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.barProductUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barProductUpdate_ItemClick);
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -179,19 +208,27 @@ namespace TechnicService
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup6});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Ürünler";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnProducts);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnCategory);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnCategory);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnProducts);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barProductAdd);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barProductUpdate);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
             // xtraTabbedMdiManager1
             // 
@@ -241,7 +278,7 @@ namespace TechnicService
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -274,5 +311,8 @@ namespace TechnicService
         private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
         private DevExpress.Utils.WorkspaceManager workspaceManager1;
         private DevExpress.XtraBars.BarButtonItem btnCategoryUpdate;
+        private DevExpress.XtraBars.BarButtonItem barProductAdd;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem barProductUpdate;
     }
 }

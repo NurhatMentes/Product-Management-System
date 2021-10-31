@@ -112,6 +112,18 @@
     <Compile Include="Forms\FrmMalfunction.Designer.cs">
       <DependentUpon>FrmMalfunction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProductAdd.Designer.cs">
+      <DependentUpon>FrmProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProductList.Designer.cs">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmProsess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,11 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>TechnicServiceDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="TechnicServiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechnicServiceDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TechnicServiceDb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMalfunction.resx">
       <DependentUpon>FrmMalfunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProductAdd.resx">
+      <DependentUpon>FrmProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProductList.resx">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProsess.resx">
       <DependentUpon>FrmProsess.cs</DependentUpon>
@@ -222,6 +245,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TechnicServiceDb.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="TechnicServiceDataSet.xsc">
+      <DependentUpon>TechnicServiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TechnicServiceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechnicServiceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechnicServiceDataSet.xss">
+      <DependentUpon>TechnicServiceDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TechnicServiceDb.edmx.diagram">
       <DependentUpon>TechnicServiceDb.edmx</DependentUpon>
     </None>
@@ -276,6 +310,8 @@
     <None Include="Resources\cancel_32x321.png" />
     <None Include="Resources\delete_32x32.png" />
     <None Include="Resources\refresh_32x32.png" />
+    <None Include="Resources\refreshallpivottable_32x321.png" />
+    <None Include="Resources\refreshallpivottable_16x161.png" />
     <Content Include="TechnicServiceDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TechnicServiceDb.Context.cs</LastGenOutput>
