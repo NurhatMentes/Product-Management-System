@@ -154,6 +154,7 @@ namespace TechnicService
             this.btnCategoryUpdate.ImageOptions.Image = global::TechnicService.Properties.Resources.refreshallpivottable_16x16;
             this.btnCategoryUpdate.ImageOptions.LargeImage = global::TechnicService.Properties.Resources.refreshallpivottable_32x32;
             this.btnCategoryUpdate.Name = "btnCategoryUpdate";
+            this.btnCategoryUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCategoryUpdate_ItemClick);
             // 
             // barToggleSwitchItem1
             // 

@@ -47,5 +47,11 @@ namespace TechnicService
             FrmCategoryDelete categoryDelete = new FrmCategoryDelete();
             categoryDelete.Show();
         }
+
+        private void btnCategoryUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmCategoryUpdate categoryUpdate = new FrmCategoryUpdate();
+            categoryUpdate.Show();
+        }
     }
 }

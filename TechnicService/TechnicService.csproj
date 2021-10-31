@@ -100,6 +100,12 @@
     <Compile Include="Forms\FrmCategoryDelete.Designer.cs">
       <DependentUpon>FrmCategoryDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCategoryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCategoryUpdate.Designer.cs">
+      <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMalfunction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCategoryDelete.resx">
       <DependentUpon>FrmCategoryDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCategoryUpdate.resx">
+      <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMalfunction.resx">
       <DependentUpon>FrmMalfunction.cs</DependentUpon>
@@ -266,6 +275,7 @@
     <None Include="Resources\add_32x321.png" />
     <None Include="Resources\cancel_32x321.png" />
     <None Include="Resources\delete_32x32.png" />
+    <None Include="Resources\refresh_32x32.png" />
     <Content Include="TechnicServiceDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TechnicServiceDb.Context.cs</LastGenOutput>

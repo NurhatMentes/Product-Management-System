@@ -28,7 +28,7 @@ namespace TechnicService.Forms
             if (txtName.Text != "")
             {
                 Category category = new Category();
-                category.Name = txtName.Text;
+                category.Name =  char.ToUpper(txtName.Text[0]).ToString()+txtName.Text.Substring(1);
                 _entities.Category.Add(category);
                 _entities.SaveChanges();
             MessageBox.Show("Kategori başarı ile eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
