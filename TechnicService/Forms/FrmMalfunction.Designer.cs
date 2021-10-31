@@ -616,12 +616,12 @@ namespace TechnicService.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1701, 778);
-            this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.pnlList);
             this.Controls.Add(this.grpAdd);
+            this.Controls.Add(this.grpUpdate);
+            this.Controls.Add(this.pnlList);
             this.Name = "FrmMalfunction";
             this.Text = "Arızalı Ürünler";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

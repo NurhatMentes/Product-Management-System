@@ -93,15 +93,15 @@ namespace TechnicService.Forms
                     char rnd3 = Convert.ToChar(kod2);
                     char rnd4 = Convert.ToChar(kod3);
 
-                    malfunctions.Title = textEdit1.Text;
-                    malfunctions.Problem = txtProblem.Text;
-                    malfunctions.Description = txtDescription.Text;
+                    malfunctions.Title = char.ToUpper(textEdit1.Text[0]).ToString()+ textEdit1.Text.Substring(1);
+                    malfunctions.Problem = char.ToUpper(txtProblem.Text[0]).ToString() + txtProblem.Text.Substring(1);
+                    malfunctions.Description = char.ToUpper(txtDescription.Text[0]).ToString() + txtDescription.Text.Substring(1);
                     malfunctions.Price=Convert.ToDecimal(txtPrice.Text);
-                    malfunctionUpdate.Process = txtProcess.Text;
+                    malfunctionUpdate.Process = char.ToUpper(txtProcess.Text[0]).ToString() + txtProcess.Text.Substring(1);
                     malfunctions.Status = false;
-                    malfunctions.CustomerFirstName = txtFirstName.Text;
-                    malfunctions.CustomerLastName = txtLastName.Text;
-                    malfunctions.CustomerPhone = txtPhone.Text;
+                    malfunctions.CustomerFirstName = char.ToUpper(txtFirstName.Text[0]).ToString() + txtFirstName.Text.Substring(1);
+                    malfunctions.CustomerLastName = char.ToUpper(txtLastName.Text[0]).ToString() + txtLastName.Text.Substring(1);
+                    malfunctions.CustomerPhone = char.ToUpper(txtPhone.Text[0]).ToString() + txtPhone.Text.Substring(1);
                     malfunctions.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
                     malfunctionUpdate.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
                     _entities.MalfunctionUpdate.Add(malfunctionUpdate);

@@ -38,12 +38,11 @@ namespace TechnicService.Forms
         {
             if (cbxCategory.Text != "")
             {
-
                 int id = Int32.Parse(cbxCategory.EditValue.ToString());
                 Category category = (from x in _entities.Category
                     where x.Id == id
                     select x).FirstOrDefault();
-                category.Name = txtName.Text;
+                category.Name = char.ToUpper(txtName.Text[0]).ToString() + txtName.Text.Substring(1);
                 _entities.SaveChanges();
 
                 CategorySelection();
