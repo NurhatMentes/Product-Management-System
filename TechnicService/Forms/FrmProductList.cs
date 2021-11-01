@@ -32,7 +32,7 @@ namespace TechnicService.Forms
                     AlışFiyatı = x.Purchase,
                     SatışFiyatı = x.SalesPrice,
                     Stok = x.stock,
-                    Durum = x.Status ? "Stokta var" : "Stokta yok",
+                    Durum = x.Status ? "Stokta var" : "Stokta yok"
                 };
             gridControl1.DataSource = values.ToList();
         }

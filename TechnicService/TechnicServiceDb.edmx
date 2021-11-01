@@ -33,9 +33,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
           <Property Name="Price" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Date" Type="date" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="Malfunctions">
           <Key>
@@ -71,6 +72,7 @@
           <Property Name="Purchase" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="SalesPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="stock" Type="int" Nullable="false" />
+          <Property Name="BarcodeNo" Type="nvarchar" MaxLength="20" />
           <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Revenues">
@@ -102,6 +104,18 @@
           <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="Mail" Type="nchar" MaxLength="30" />
         </EntityType>
+        <Association Name="FK_Expenses_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Expenses" Type="Self.Expenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Expenses">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Products_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -124,6 +138,10 @@
           <EntitySet Name="Revenues" EntityType="Self.Revenues" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Expenses_Products" Association="Self.FK_Expenses_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Expenses" EntitySet="Expenses" />
+          </AssociationSet>
           <AssociationSet Name="FK_Products_Category" Association="Self.FK_Products_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="Products" EntitySet="Products" />
@@ -163,8 +181,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Db.FK_Expenses_Products" FromRole="Expenses" ToRole="Products" />
         </EntityType>
         <EntityType Name="Malfunctions">
           <Key>
@@ -194,6 +214,8 @@
           <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Products_Category" FromRole="Products" ToRole="Category" />
+          <Property Name="BarcodeNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Expenses" Relationship="Db.FK_Expenses_Products" FromRole="Products" ToRole="Expenses" />
         </EntityType>
         <EntityType Name="Revenues">
           <Key>
@@ -250,6 +272,10 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
           <EntitySet Name="MalfunctionUpdate" EntityType="Db.MalfunctionUpdate" />
+          <AssociationSet Name="FK_Expenses_Products" Association="Db.FK_Expenses_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Expenses" EntitySet="Expenses" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="MalfunctionUpdate">
           <Key>
@@ -259,6 +285,18 @@
           <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
           <Property Name="Process" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK_Expenses_Products">
+          <End Type="Db.Products" Role="Products" Multiplicity="1" />
+          <End Type="Db.Expenses" Role="Expenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Expenses">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -293,9 +331,10 @@
           <EntitySetMapping Name="Expenses">
             <EntityTypeMapping TypeName="Db.Expenses">
               <MappingFragment StoreEntitySet="Expenses">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -319,6 +358,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="Db.Products">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="BarcodeNo" ColumnName="BarcodeNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

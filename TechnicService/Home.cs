@@ -62,6 +62,9 @@ namespace TechnicService
 
         private void barProductUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
+            FrmProductUpdate update = new FrmProductUpdate();
+            update.MdiParent = this;
+            update.Show();
         }
 
         private void barProductAdd_ItemClick(object sender, ItemClickEventArgs e)
