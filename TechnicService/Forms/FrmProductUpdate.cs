@@ -65,5 +65,10 @@ namespace TechnicService.Forms
             CategorySelection();
             ProductSelection();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

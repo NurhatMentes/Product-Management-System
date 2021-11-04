@@ -80,5 +80,12 @@ namespace TechnicService
             frmProductList.MdiParent = this;
             frmProductList.Show();
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmExpenses expenses = new FrmExpenses();
+            expenses.MdiParent = this;
+            expenses.Show();
+        }
     }
 }
