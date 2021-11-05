@@ -133,23 +133,23 @@ namespace TechnicService.Forms
             // cbxCategory
             // 
             this.cbxCategory.Location = new System.Drawing.Point(169, 147);
-            this.cbxCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbxCategory.Name = "cbxCategory";
-            this.cbxCategory.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxCategory.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxCategory.Properties.Appearance.Options.UseFont = true;
             this.cbxCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxCategory.Properties.DisplayMember = "Name";
             this.cbxCategory.Properties.NullText = "Kategori Seçiniz";
             this.cbxCategory.Properties.ValueMember = "Id";
-            this.cbxCategory.Size = new System.Drawing.Size(411, 28);
+            this.cbxCategory.Size = new System.Drawing.Size(411, 26);
             this.cbxCategory.TabIndex = 54;
             // 
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStock.Location = new System.Drawing.Point(169, 315);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStock.Properties.Appearance.Options.UseFont = true;
@@ -165,7 +165,7 @@ namespace TechnicService.Forms
             // 
             this.txtPurchase.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPurchase.Location = new System.Drawing.Point(169, 229);
-            this.txtPurchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPurchase.Properties.Appearance.Options.UseFont = true;
@@ -181,7 +181,7 @@ namespace TechnicService.Forms
             // 
             this.txtbrand.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbrand.Location = new System.Drawing.Point(169, 188);
-            this.txtbrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtbrand.Name = "txtbrand";
             this.txtbrand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtbrand.Properties.Appearance.Options.UseFont = true;
@@ -193,7 +193,7 @@ namespace TechnicService.Forms
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Location = new System.Drawing.Point(169, 106);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
@@ -212,7 +212,7 @@ namespace TechnicService.Forms
             this.btnProductUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductUpdate.ImageOptions.Image")));
             this.btnProductUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnProductUpdate.Location = new System.Drawing.Point(235, 406);
-            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductUpdate.Name = "btnProductUpdate";
             this.btnProductUpdate.Size = new System.Drawing.Size(381, 59);
             this.btnProductUpdate.TabIndex = 47;
@@ -223,7 +223,7 @@ namespace TechnicService.Forms
             // 
             this.txtSalesPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSalesPrice.Location = new System.Drawing.Point(169, 273);
-            this.txtSalesPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSalesPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalesPrice.Name = "txtSalesPrice";
             this.txtSalesPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSalesPrice.Properties.Appearance.Options.UseFont = true;
@@ -255,9 +255,9 @@ namespace TechnicService.Forms
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(509, 68);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(756, 485);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
@@ -278,7 +278,7 @@ namespace TechnicService.Forms
             // cbxProduct
             // 
             this.cbxProduct.Location = new System.Drawing.Point(169, 71);
-            this.cbxProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxProduct.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProduct.Name = "cbxProduct";
             this.cbxProduct.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxProduct.Properties.Appearance.Options.UseFont = true;
@@ -295,7 +295,7 @@ namespace TechnicService.Forms
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(50, 148);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -310,8 +310,9 @@ namespace TechnicService.Forms
             this.ClientSize = new System.Drawing.Size(1276, 632);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmProductUpdate";
+            this.Text = "Ürün Güncelleme";
             this.Load += new System.EventHandler(this.FrmProductUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbxCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();

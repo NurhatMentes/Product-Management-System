@@ -38,28 +38,32 @@ namespace TechnicService.Forms
             // dtProsess
             // 
             this.dtProsess.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtProsess.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtProsess.Location = new System.Drawing.Point(0, 0);
             this.dtProsess.MainView = this.gridView1;
+            this.dtProsess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtProsess.Name = "dtProsess";
-            this.dtProsess.Size = new System.Drawing.Size(1413, 713);
+            this.dtProsess.Size = new System.Drawing.Size(1060, 579);
             this.dtProsess.TabIndex = 0;
             this.dtProsess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.dtProsess;
             this.gridView1.Name = "gridView1";
             // 
             // FrmProsess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1413, 713);
+            this.ClientSize = new System.Drawing.Size(1060, 579);
             this.Controls.Add(this.dtProsess);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmProsess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProsessForm";
+            this.Text = "İşlemler";
             this.Load += new System.EventHandler(this.FrmProsess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtProsess)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

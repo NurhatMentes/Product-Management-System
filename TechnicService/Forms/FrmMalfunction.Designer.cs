@@ -676,11 +676,12 @@ namespace TechnicService.Forms
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.pnlList);
             this.Controls.Add(this.grpAdd);
+            this.Controls.Add(this.grpUpdate);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMalfunction";
+            this.Text = "Arzalı Ürünler";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMalfunction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlList)).EndInit();
