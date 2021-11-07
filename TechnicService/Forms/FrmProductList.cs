@@ -37,9 +37,30 @@ namespace TechnicService.Forms
                 };
             gridControl1.DataSource = values.ToList();
         }
+
+        void CountOfPurchase()
+        {
+            lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString();
+        }
+
+        void CountOfExpenses()
+        {
+            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString();
+        }
+        void CountOfStock()
+        {
+            lblStockCount.Text = _entities.Products.Sum(x => x.stock).ToString();
+        }
+        void CountOutOfStock()
+        {
+            lblOutOfStock.Text = _entities.Products.Count(x=>x.stock<=0).ToString();
+        }
         private void FrmProductList_Load(object sender, EventArgs e)
         {
-            
+            CountOfPurchase();
+            CountOfExpenses();
+            CountOfStock();
+            CountOutOfStock();
             ProductList();
         }
 
@@ -66,6 +87,11 @@ namespace TechnicService.Forms
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
         {
 
         }
