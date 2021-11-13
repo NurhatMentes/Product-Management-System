@@ -21,8 +21,6 @@ namespace TechnicService
         }
 
 
-      
-
         private void btnMalfunctions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (frmMalfunction == null || frmMalfunction.IsDisposed)
@@ -86,6 +84,27 @@ namespace TechnicService
             FrmExpenses expenses = new FrmExpenses();
             expenses.MdiParent = this;
             expenses.Show();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmStatistic statistic = new FrmStatistic();
+            statistic.MdiParent = this;
+            statistic.Show();
+        }
+
+        private void barMounthSell_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmStatistickMounthSell statistic = new FrmStatistickMounthSell();
+            statistic.MdiParent = this;
+            statistic.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmStatistickAnnualSalesAndAverage statistic = new FrmStatistickAnnualSalesAndAverage();
+            statistic.MdiParent = this;
+            statistic.Show();
         }
     }
 }

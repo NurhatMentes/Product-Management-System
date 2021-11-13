@@ -91,11 +91,11 @@ namespace TechnicService.Forms
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(54, 33);
+            this.labelControl1.Location = new System.Drawing.Point(52, 33);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(158, 24);
+            this.labelControl1.Size = new System.Drawing.Size(175, 28);
             this.labelControl1.TabIndex = 79;
             this.labelControl1.Text = "Toplam Alış Fiyatı";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
@@ -126,7 +126,7 @@ namespace TechnicService.Forms
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.BackColor = System.Drawing.Color.MistyRose;
             this.panel2.Controls.Add(this.labelControl3);
             this.panel2.Controls.Add(this.lblExpenses);
             this.panel2.Location = new System.Drawing.Point(1696, 110);
@@ -136,13 +136,13 @@ namespace TechnicService.Forms
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(54, 33);
+            this.labelControl3.Location = new System.Drawing.Point(50, 33);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(158, 24);
+            this.labelControl3.Size = new System.Drawing.Size(189, 28);
             this.labelControl3.TabIndex = 79;
-            this.labelControl3.Text = "Toplam Alış Fiyatı";
+            this.labelControl3.Text = "Toplam Satış Fiyatı";
             // 
             // lblExpenses
             // 
@@ -158,7 +158,7 @@ namespace TechnicService.Forms
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.BackColor = System.Drawing.SystemColors.Info;
+            this.panel3.BackColor = System.Drawing.Color.Coral;
             this.panel3.Controls.Add(this.labelControl2);
             this.panel3.Controls.Add(this.lblOutOfStock);
             this.panel3.Location = new System.Drawing.Point(1696, 376);
@@ -168,11 +168,11 @@ namespace TechnicService.Forms
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(40, 33);
+            this.labelControl2.Location = new System.Drawing.Point(10, 33);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(208, 24);
+            this.labelControl2.Size = new System.Drawing.Size(237, 28);
             this.labelControl2.TabIndex = 79;
             this.labelControl2.Text = "Stoğu Biten Ürün Sayısı";
             // 
@@ -190,7 +190,7 @@ namespace TechnicService.Forms
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.BackColor = System.Drawing.SystemColors.Info;
+            this.panel4.BackColor = System.Drawing.Color.DarkOrange;
             this.panel4.Controls.Add(this.labelControl5);
             this.panel4.Controls.Add(this.lblStockCount);
             this.panel4.Location = new System.Drawing.Point(1348, 376);
@@ -200,13 +200,13 @@ namespace TechnicService.Forms
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(82, 33);
+            this.labelControl5.Location = new System.Drawing.Point(43, 33);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(113, 24);
+            this.labelControl5.Size = new System.Drawing.Size(188, 28);
             this.labelControl5.TabIndex = 79;
-            this.labelControl5.Text = "Toplam Stok";
+            this.labelControl5.Text = "Toplam Stok Sayısı";
             // 
             // lblStockCount
             // 
@@ -223,7 +223,7 @@ namespace TechnicService.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(2006, 778);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);

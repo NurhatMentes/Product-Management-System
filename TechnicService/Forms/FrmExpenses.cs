@@ -74,6 +74,9 @@ namespace TechnicService.Forms
                     txtquantity.Text = 1.ToString();
                     txtprice.Text = entity.SalesPrice.ToString();
                     btnSell.Enabled = true;
+                    txtBarcode.Visible = false;
+                    barCodeControl1.Text = txtBarcode.Text.ToUpper();
+                    barCodeControl1.Visible = true;
                 }
 
             }

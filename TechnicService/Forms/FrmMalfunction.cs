@@ -12,6 +12,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Data.ODataLinq.Helpers;
 using DevExpress.DataAccess.Native.Web;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraEditors.Popup;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.Customization;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace TechnicService.Forms
 {
@@ -23,9 +28,10 @@ namespace TechnicService.Forms
         }
 
         TechnicServiceEntities _entities = new TechnicServiceEntities();
-        Malfunctions malfunctions = new Malfunctions(); 
-        MalfunctionUpdate malfunctionUpdate = new MalfunctionUpdate();
+        Malfunctions _malfunctions = new Malfunctions(); 
+        MalfunctionUpdate _malfunctionUpdate = new MalfunctionUpdate();
         
+
 
         void MalfunctionList()
         {
@@ -39,9 +45,17 @@ namespace TechnicService.Forms
                     Sorun = x.Problem,
                     Açıklama = x.Description,
                     Fiyat = x.Price,
-                    Durum = x.Status ? "Teslim Edildi" : "Teslim edilmedi"
+                    Durum = x.Status ? "Teslim Edildi"  : "Teslim edilmedi" 
                 };
             dtList.DataSource = values.ToList();
+
+            //foreach (DataGridViewRow row in dtList.BackColor)
+            //{
+            //    if (row.Cells[5].Value.ToString() == "Pasif")
+            //    {
+            //        row.DefaultCellStyle.BackColor = Color.Red;
+            //    }
+            //}
         }
         private void FrmMalfunction_Load(object sender, EventArgs e)
         {
@@ -93,19 +107,19 @@ namespace TechnicService.Forms
                     char rnd3 = Convert.ToChar(kod2);
                     char rnd4 = Convert.ToChar(kod3);
 
-                    malfunctions.Title = char.ToUpper(textEdit1.Text[0]).ToString()+ textEdit1.Text.Substring(1);
-                    malfunctions.Problem = char.ToUpper(txtProblem.Text[0]).ToString() + txtProblem.Text.Substring(1);
-                    malfunctions.Description = char.ToUpper(txtDescription.Text[0]).ToString() + txtDescription.Text.Substring(1);
-                    malfunctions.Price=Convert.ToDecimal(txtPrice.Text);
-                    malfunctionUpdate.Process = char.ToUpper(txtProcess.Text[0]).ToString() + txtProcess.Text.Substring(1);
-                    malfunctions.Status = false;
-                    malfunctions.CustomerFirstName = char.ToUpper(txtFirstName.Text[0]).ToString() + txtFirstName.Text.Substring(1);
-                    malfunctions.CustomerLastName = char.ToUpper(txtLastName.Text[0]).ToString() + txtLastName.Text.Substring(1);
-                    malfunctions.CustomerPhone = char.ToUpper(txtPhone.Text[0]).ToString() + txtPhone.Text.Substring(1);
-                    malfunctions.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
-                    malfunctionUpdate.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
-                    _entities.MalfunctionUpdate.Add(malfunctionUpdate);
-                    _entities.Malfunctions.Add(malfunctions);
+                    _malfunctions.Title = char.ToUpper(textEdit1.Text[0]).ToString()+ textEdit1.Text.Substring(1);
+                    _malfunctions.Problem = char.ToUpper(txtProblem.Text[0]).ToString() + txtProblem.Text.Substring(1);
+                    _malfunctions.Description = char.ToUpper(txtDescription.Text[0]).ToString() + txtDescription.Text.Substring(1);
+                    _malfunctions.Price=Convert.ToDecimal(txtPrice.Text);
+                    _malfunctionUpdate.Process = char.ToUpper(txtProcess.Text[0]).ToString() + txtProcess.Text.Substring(1);
+                    _malfunctions.Status = false;
+                    _malfunctions.CustomerFirstName = char.ToUpper(txtFirstName.Text[0]).ToString() + txtFirstName.Text.Substring(1);
+                    _malfunctions.CustomerLastName = char.ToUpper(txtLastName.Text[0]).ToString() + txtLastName.Text.Substring(1);
+                    _malfunctions.CustomerPhone = char.ToUpper(txtPhone.Text[0]).ToString() + txtPhone.Text.Substring(1);
+                    _malfunctions.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
+                    _malfunctionUpdate.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
+                    _entities.MalfunctionUpdate.Add(_malfunctionUpdate);
+                    _entities.Malfunctions.Add(_malfunctions);
                     try
                     {
                         _entities.SaveChanges();
@@ -137,11 +151,7 @@ namespace TechnicService.Forms
         }
         private void grdMalfunction_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            FrmProsess frmProsess = new FrmProsess();
-            string id = grdMalfunction.GetFocusedRowCellValue("SerialNo").ToString();
-
-            frmProsess.malfunctionSerialNo = id;
-            frmProsess.Show();
+          
         }
 
         private void grdMalfunction_DoubleClick(object sender, EventArgs e)
@@ -160,14 +170,14 @@ namespace TechnicService.Forms
 
         private void btnUptated_Click(object sender, EventArgs e)
         {
-            malfunctionUpdate.SerialNo = cbxSerialNo.EditValue.ToString();
-            malfunctionUpdate.Process = txtProcessUptade.Text;
-            _entities.MalfunctionUpdate.Add(malfunctionUpdate);
+            _malfunctionUpdate.SerialNo = cbxSerialNo.EditValue.ToString();
+            _malfunctionUpdate.Process = txtProcessUptade.Text;
+            _entities.MalfunctionUpdate.Add(_malfunctionUpdate);
 
             if (check.Checked)
             {
                 Malfunctions malfunctions = (from malfunction in _entities.Malfunctions
-                    where malfunction.SerialNo == malfunctionUpdate.SerialNo
+                    where malfunction.SerialNo == _malfunctionUpdate.SerialNo
                     select malfunction).SingleOrDefault();
                 malfunctions.Status = true;
             }
@@ -176,6 +186,37 @@ namespace TechnicService.Forms
 
             MessageBox.Show("Ürün başarı ile Güncellendi", "Başarılı", MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
+        }
+
+        private void dtList_MouseDown(object sender, MouseEventArgs e)
+        {
+            FrmProsess frmProsess = new FrmProsess();
+            string id = grdMalfunction.GetFocusedRowCellValue("SerialNo").ToString();
+
+            frmProsess.malfunctionSerialNo = id;
+            frmProsess.Show();
+        }
+
+        private void dtList_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            if (e.RowHandle >= 0)
+            {
+                GridView View = sender as GridView;
+                if (e.Column.FieldName == "SiparisHareket")
+                {
+                    bool value = Convert.ToBoolean(View.GetRowCellDisplayText(e.RowHandle, "Aktif"));
+                    // "Aktif" yerine kolon kullanabilirsiniz. View.Columns[1]
+                    if (value)
+                        e.Appearance.BackColor = Color.Green;
+                    else
+                    {
+                        value = Convert.ToBoolean(View.GetRowCellDisplayText(e.RowHandle, "Pasif"));
+                        // "Pasif" yerine kolon kullanabilirsiniz. View.Columns[2]
+                        if (value)
+                            e.Appearance.BackColor = Color.Red;
+                    }
+                }
+            }
         }
     }
 }

@@ -36,25 +36,28 @@ namespace TechnicService.Forms
                     Durum = x.Status ? "Stokta var" : "Stokta yok"
                 };
             gridControl1.DataSource = values.ToList();
+
+           
         }
 
         void CountOfPurchase()
         {
-            lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString();
+            lblPurches.Text = _entities.Products.Sum(x => x.Purchase)+ " ₺";
         }
 
         void CountOfExpenses()
         {
-            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString();
+            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice)+ " ₺";
         }
         void CountOfStock()
         {
-            lblStockCount.Text = _entities.Products.Sum(x => x.stock).ToString();
+            lblStockCount.Text = _entities.Products.Sum(x => x.stock)+ " Adet";
         }
         void CountOutOfStock()
         {
-            lblOutOfStock.Text = _entities.Products.Count(x=>x.stock<=0).ToString();
+            lblOutOfStock.Text = _entities.Products.Count(x=>x.stock<=0) + " Adet";
         }
+
         private void FrmProductList_Load(object sender, EventArgs e)
         {
             CountOfPurchase();
@@ -64,7 +67,6 @@ namespace TechnicService.Forms
             ProductList();
         }
 
-       
 
         private void pictureEdit2_Click(object sender, EventArgs e)
         {

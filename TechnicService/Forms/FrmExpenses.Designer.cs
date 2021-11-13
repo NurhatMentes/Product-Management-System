@@ -29,7 +29,7 @@ namespace TechnicService.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator ınterleaved2of5Generator3 = new DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator();
+            DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator ınterleaved2of5Generator1 = new DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExpenses));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@ namespace TechnicService.Forms
             // checkSale
             // 
             this.checkSale.Location = new System.Drawing.Point(868, 452);
-            this.checkSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkSale.Margin = new System.Windows.Forms.Padding(4);
             this.checkSale.Name = "checkSale";
             this.checkSale.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkSale.Properties.Appearance.Options.UseFont = true;
@@ -149,7 +149,7 @@ namespace TechnicService.Forms
             // txtprice
             // 
             this.txtprice.Location = new System.Drawing.Point(1003, 396);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(4);
             this.txtprice.Name = "txtprice";
             this.txtprice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtprice.Properties.Appearance.Options.UseFont = true;
@@ -162,7 +162,7 @@ namespace TechnicService.Forms
             // txtquantity
             // 
             this.txtquantity.Location = new System.Drawing.Point(1004, 343);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtquantity.Properties.Appearance.Options.UseFont = true;
@@ -176,7 +176,7 @@ namespace TechnicService.Forms
             // 
             this.txtBrand.Enabled = false;
             this.txtBrand.Location = new System.Drawing.Point(1003, 252);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(4);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBrand.Properties.Appearance.Options.UseFont = true;
@@ -187,7 +187,7 @@ namespace TechnicService.Forms
             // 
             this.txtProductName.Enabled = false;
             this.txtProductName.Location = new System.Drawing.Point(1003, 202);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtProductName.Properties.Appearance.Options.UseFont = true;
@@ -197,7 +197,7 @@ namespace TechnicService.Forms
             // txtBarcode
             // 
             this.txtBarcode.Location = new System.Drawing.Point(1003, 154);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarcode.Properties.Appearance.Options.UseFont = true;
@@ -208,14 +208,13 @@ namespace TechnicService.Forms
             // barCodeControl1
             // 
             this.barCodeControl1.Location = new System.Drawing.Point(1003, 133);
-            this.barCodeControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barCodeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.barCodeControl1.Name = "barCodeControl1";
             this.barCodeControl1.Padding = new System.Windows.Forms.Padding(13, 2, 13, 0);
-            this.barCodeControl1.Size = new System.Drawing.Size(505, 53);
-            ınterleaved2of5Generator3.WideNarrowRatio = 3F;
-            this.barCodeControl1.Symbology = ınterleaved2of5Generator3;
+            this.barCodeControl1.Size = new System.Drawing.Size(738, 53);
+            ınterleaved2of5Generator1.WideNarrowRatio = 3F;
+            this.barCodeControl1.Symbology = ınterleaved2of5Generator1;
             this.barCodeControl1.TabIndex = 15;
-            this.barCodeControl1.Text = "15918615981565";
             this.barCodeControl1.Visible = false;
             // 
             // spinSale
@@ -226,7 +225,7 @@ namespace TechnicService.Forms
             0,
             0});
             this.spinSale.Location = new System.Drawing.Point(1069, 450);
-            this.spinSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spinSale.Margin = new System.Windows.Forms.Padding(4);
             this.spinSale.Name = "spinSale";
             this.spinSale.Properties.BeepOnError = false;
             this.spinSale.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -254,7 +253,7 @@ namespace TechnicService.Forms
             this.btnSell.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.ImageOptions.Image")));
             this.btnSell.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnSell.Location = new System.Drawing.Point(979, 514);
-            this.btnSell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSell.Margin = new System.Windows.Forms.Padding(4);
             this.btnSell.Name = "btnSell";
             this.btnSell.Size = new System.Drawing.Size(329, 79);
             this.btnSell.TabIndex = 17;
@@ -266,7 +265,7 @@ namespace TechnicService.Forms
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 142);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(815, 358);
             this.pictureBox1.TabIndex = 18;
@@ -295,7 +294,7 @@ namespace TechnicService.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.barCodeControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmExpenses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Satış";
