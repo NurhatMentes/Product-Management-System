@@ -63,10 +63,9 @@ namespace TechnicService.Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(74, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(99, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 19);
+            this.label1.Size = new System.Drawing.Size(96, 24);
             this.label1.TabIndex = 49;
             this.label1.Text = "*Kategori";
             // 
@@ -75,10 +74,9 @@ namespace TechnicService.Forms
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(74, 318);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(99, 391);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 19);
+            this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 46;
             this.label7.Text = "*Adet ";
             // 
@@ -87,10 +85,9 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(74, 276);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(99, 340);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 19);
+            this.label8.Size = new System.Drawing.Size(113, 24);
             this.label8.TabIndex = 45;
             this.label8.Text = "*Satış Fiyat";
             // 
@@ -99,10 +96,9 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(74, 233);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(99, 287);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 19);
+            this.label9.Size = new System.Drawing.Size(106, 24);
             this.label9.TabIndex = 43;
             this.label9.Text = "*Alış Fiyatı";
             // 
@@ -111,10 +107,9 @@ namespace TechnicService.Forms
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(74, 192);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(99, 236);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 19);
+            this.label10.Size = new System.Drawing.Size(75, 24);
             this.label10.TabIndex = 42;
             this.label10.Text = "*Marka";
             // 
@@ -123,17 +118,16 @@ namespace TechnicService.Forms
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(74, 115);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(99, 142);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 19);
+            this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 41;
             this.label6.Text = "*Ürün Adı";
             // 
             // cbxCategory
             // 
-            this.cbxCategory.Location = new System.Drawing.Point(169, 147);
-            this.cbxCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxCategory.Location = new System.Drawing.Point(225, 181);
+            this.cbxCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxCategory.Properties.Appearance.Options.UseFont = true;
@@ -142,14 +136,14 @@ namespace TechnicService.Forms
             this.cbxCategory.Properties.DisplayMember = "Name";
             this.cbxCategory.Properties.NullText = "Kategori Seçiniz";
             this.cbxCategory.Properties.ValueMember = "Id";
-            this.cbxCategory.Size = new System.Drawing.Size(411, 26);
+            this.cbxCategory.Size = new System.Drawing.Size(548, 30);
             this.cbxCategory.TabIndex = 54;
             // 
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(169, 315);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock.Location = new System.Drawing.Point(225, 388);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStock.Properties.Appearance.Options.UseFont = true;
@@ -158,14 +152,14 @@ namespace TechnicService.Forms
             this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStock.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.txtStock.Properties.MaskSettings.Set("mask", "d");
-            this.txtStock.Size = new System.Drawing.Size(411, 28);
+            this.txtStock.Size = new System.Drawing.Size(548, 32);
             this.txtStock.TabIndex = 52;
             // 
             // txtPurchase
             // 
             this.txtPurchase.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPurchase.Location = new System.Drawing.Point(169, 229);
-            this.txtPurchase.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPurchase.Location = new System.Drawing.Point(225, 282);
+            this.txtPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPurchase.Properties.Appearance.Options.UseFont = true;
@@ -174,31 +168,31 @@ namespace TechnicService.Forms
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.txtPurchase.Properties.MaskSettings.Set("mask", "c");
-            this.txtPurchase.Size = new System.Drawing.Size(411, 28);
+            this.txtPurchase.Size = new System.Drawing.Size(548, 32);
             this.txtPurchase.TabIndex = 51;
             // 
             // txtbrand
             // 
             this.txtbrand.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbrand.Location = new System.Drawing.Point(169, 188);
-            this.txtbrand.Margin = new System.Windows.Forms.Padding(2);
+            this.txtbrand.Location = new System.Drawing.Point(225, 231);
+            this.txtbrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbrand.Name = "txtbrand";
             this.txtbrand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtbrand.Properties.Appearance.Options.UseFont = true;
             this.txtbrand.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtbrand.Size = new System.Drawing.Size(411, 28);
+            this.txtbrand.Size = new System.Drawing.Size(548, 32);
             this.txtbrand.TabIndex = 50;
             // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName.Location = new System.Drawing.Point(169, 106);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Location = new System.Drawing.Point(225, 130);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtName.Size = new System.Drawing.Size(411, 28);
+            this.txtName.Size = new System.Drawing.Size(548, 32);
             this.txtName.TabIndex = 48;
             // 
             // btnProductUpdate
@@ -211,10 +205,10 @@ namespace TechnicService.Forms
             this.btnProductUpdate.Appearance.Options.UseFont = true;
             this.btnProductUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductUpdate.ImageOptions.Image")));
             this.btnProductUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnProductUpdate.Location = new System.Drawing.Point(235, 406);
-            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProductUpdate.Location = new System.Drawing.Point(313, 500);
+            this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductUpdate.Name = "btnProductUpdate";
-            this.btnProductUpdate.Size = new System.Drawing.Size(381, 59);
+            this.btnProductUpdate.Size = new System.Drawing.Size(508, 73);
             this.btnProductUpdate.TabIndex = 47;
             this.btnProductUpdate.Text = "Güncelle";
             this.btnProductUpdate.Click += new System.EventHandler(this.btnProductUpdate_Click);
@@ -222,8 +216,8 @@ namespace TechnicService.Forms
             // txtSalesPrice
             // 
             this.txtSalesPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSalesPrice.Location = new System.Drawing.Point(169, 273);
-            this.txtSalesPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSalesPrice.Location = new System.Drawing.Point(225, 336);
+            this.txtSalesPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalesPrice.Name = "txtSalesPrice";
             this.txtSalesPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSalesPrice.Properties.Appearance.Options.UseFont = true;
@@ -232,7 +226,7 @@ namespace TechnicService.Forms
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.txtSalesPrice.Properties.MaskSettings.Set("mask", "c");
-            this.txtSalesPrice.Size = new System.Drawing.Size(411, 28);
+            this.txtSalesPrice.Size = new System.Drawing.Size(548, 32);
             this.txtSalesPrice.TabIndex = 44;
             // 
             // groupBox1
@@ -254,31 +248,29 @@ namespace TechnicService.Forms
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(509, 68);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(679, 84);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(756, 485);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1008, 597);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(74, 78);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(99, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.Size = new System.Drawing.Size(63, 24);
             this.label2.TabIndex = 56;
             this.label2.Text = "*Ürün";
             // 
             // cbxProduct
             // 
-            this.cbxProduct.Location = new System.Drawing.Point(169, 71);
-            this.cbxProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxProduct.Location = new System.Drawing.Point(225, 87);
+            this.cbxProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxProduct.Name = "cbxProduct";
             this.cbxProduct.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxProduct.Properties.Appearance.Options.UseFont = true;
@@ -287,30 +279,31 @@ namespace TechnicService.Forms
             this.cbxProduct.Properties.DisplayMember = "Name";
             this.cbxProduct.Properties.NullText = "Ürün Seçiniz";
             this.cbxProduct.Properties.ValueMember = "Id";
-            this.cbxProduct.Size = new System.Drawing.Size(411, 26);
+            this.cbxProduct.Size = new System.Drawing.Size(548, 30);
             this.cbxProduct.TabIndex = 55;
+            this.cbxProduct.EditValueChanged += new System.EventHandler(this.cbxProduct_EditValueChanged);
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(50, 148);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureEdit1.Location = new System.Drawing.Point(67, 182);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(407, 340);
+            this.pictureEdit1.Size = new System.Drawing.Size(543, 418);
             this.pictureEdit1.TabIndex = 53;
             // 
             // FrmProductUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(207)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(1276, 632);
+            this.ClientSize = new System.Drawing.Size(1701, 778);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmProductUpdate";
             this.Text = "Ürün Güncelleme";
             this.Load += new System.EventHandler(this.FrmProductUpdate_Load);

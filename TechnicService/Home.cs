@@ -14,7 +14,20 @@ namespace TechnicService
 {
     public partial class Home : Form
     {
+        FrmProductList frmProductList ;
         private Forms.FrmMalfunction frmMalfunction;
+        FrmProductUpdate update ;
+        FrmProductAdd add;
+        FrmExpenses expenses;
+        FrmStatistic statistic ;
+        FrmStatistickMounthSell mounlyStatistic;
+        FrmStatistickAnnualSalesAndAverage annualStatistic ;
+
+
+
+
+
+
         public Home()
         {
             InitializeComponent();
@@ -53,58 +66,89 @@ namespace TechnicService
         {
             barProductAdd.Visibility = BarItemVisibility.Always;
             barProductUpdate.Visibility = BarItemVisibility.Always;
-            FrmProductList frmProductList = new FrmProductList();
-            frmProductList.MdiParent = this;
-            frmProductList.Show();
+            if (frmProductList == null || frmProductList.IsDisposed)
+            {
+                frmProductList = new FrmProductList();
+                frmProductList.MdiParent = this;
+                frmProductList.Show();
+            }
         }
 
         private void barProductUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmProductUpdate update = new FrmProductUpdate();
-            update.MdiParent = this;
-            update.Show();
+            if (update == null || update.IsDisposed)
+            {
+                update = new FrmProductUpdate();
+                update.MdiParent = this;
+                update.Show();
+            }
         }
 
         private void barProductAdd_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmProductAdd add = new FrmProductAdd();
-            add.MdiParent = this;
-            add.Show();
+            if (add == null || add.IsDisposed)
+            {
+                add = new FrmProductAdd();
+                add.MdiParent = this;
+                add.Show();
+            }
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            FrmProductList frmProductList = new FrmProductList();
-            frmProductList.MdiParent = this;
-            frmProductList.Show();
+            
+                frmProductList = new FrmProductList();
+                frmProductList.MdiParent = this;
+                frmProductList.Show();
+            
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmExpenses expenses = new FrmExpenses();
-            expenses.MdiParent = this;
-            expenses.Show();
+            if (expenses == null || expenses.IsDisposed)
+            {
+                expenses = new FrmExpenses();
+                expenses.MdiParent = this;
+                expenses.Show();
+            }
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmStatistic statistic = new FrmStatistic();
-            statistic.MdiParent = this;
-            statistic.Show();
+            if (statistic == null || statistic.IsDisposed)
+            {
+                statistic = new FrmStatistic();
+                statistic.MdiParent = this;
+                statistic.Show();
+            }
         }
 
         private void barMounthSell_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmStatistickMounthSell statistic = new FrmStatistickMounthSell();
-            statistic.MdiParent = this;
-            statistic.Show();
+
+            if (mounlyStatistic == null || mounlyStatistic.IsDisposed)
+            {
+                mounlyStatistic = new FrmStatistickMounthSell();
+                mounlyStatistic.MdiParent = this;
+                mounlyStatistic.Show();
+            }
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmStatistickAnnualSalesAndAverage statistic = new FrmStatistickAnnualSalesAndAverage();
-            statistic.MdiParent = this;
-            statistic.Show();
+
+            if (annualStatistic == null || annualStatistic.IsDisposed)
+            {
+                annualStatistic = new FrmStatistickAnnualSalesAndAverage();
+                annualStatistic.MdiParent = this;
+                annualStatistic.Show();
+            }
+        }
+
+        private void barReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
         }
     }
 }

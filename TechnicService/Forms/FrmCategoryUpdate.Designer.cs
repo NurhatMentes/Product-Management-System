@@ -96,6 +96,7 @@ namespace TechnicService.Forms
             this.btnIgnore.Size = new System.Drawing.Size(147, 53);
             this.btnIgnore.TabIndex = 88;
             this.btnIgnore.Text = "Vazgeç";
+            this.btnIgnore.Click += new System.EventHandler(this.btnIgnore_Click);
             // 
             // btnUpdate
             // 

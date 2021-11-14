@@ -28,6 +28,21 @@ namespace TechnicService.Forms
 
                 }).ToList();
         }
+
+        void GetProduct()
+        {
+            int productId = Convert.ToInt32(cbxProduct.EditValue);
+            if (productId > 0)
+            {
+                var product = _entities.Products.Find(productId);
+                txtName.Text = product.Name;
+                txtbrand.Text = product.Brand;
+                txtPurchase.Text =  product.Purchase.ToString();
+                txtSalesPrice.Text = product.SalesPrice.ToString();
+                txtStock.Text = product.stock.ToString();
+            }
+        }
+
         void ProductSelection()
         {
             cbxProduct.Properties.DataSource = (from x in _entities.Products
@@ -40,12 +55,12 @@ namespace TechnicService.Forms
         }
         private void btnProductUpdate_Click(object sender, EventArgs e)
         {
-            if (txtName.Text != "")
+            if (txtName.Text != "" && Convert.ToInt32(cbxCategory.EditValue)>0&&txtbrand.Text!=""&&txtStock.Text !=""&&txtPurchase.Text!=""&&txtSalesPrice.Text!="")
             {
                int id = Int32.Parse(cbxProduct.EditValue.ToString());
                var product = _entities.Products.Find(id);
                product.Name = char.ToUpper(txtName.Text[0]).ToString() + txtName.Text.Substring(1);
-                product.Brand = char.ToUpper(txtbrand.Text[0]).ToString() + txtbrand.Text.Substring(1); ;
+               product.Brand = char.ToUpper(txtbrand.Text[0]).ToString() + txtbrand.Text.Substring(1); ;
                product.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
                product.Purchase = Convert.ToDecimal(txtPurchase.Text);
                product.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
@@ -62,13 +77,15 @@ namespace TechnicService.Forms
 
         private void FrmProductUpdate_Load(object sender, EventArgs e)
         {
+            
             CategorySelection();
             ProductSelection();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
+        private void cbxProduct_EditValueChanged(object sender, EventArgs e)
+        {
+            GetProduct();
         }
     }
 }

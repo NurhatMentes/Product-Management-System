@@ -46,8 +46,9 @@ namespace TechnicService.Forms
             var minPriceProducts = _entities.Products.Min(x => x.SalesPrice);
             var minPriceProducts2 = _entities.Products.Where(x => x.SalesPrice <= minPriceProducts).Select(x => x.Name).FirstOrDefault();
 
-            var verySalesProducts = _entities.Products.Max(x => x.Expenses.Count);
-            var verySalesProducts2 = _entities.Products.Where(x => x.Expenses.Count >= verySalesProducts).Select(x => x.Name).FirstOrDefault();
+
+            var verySalesProducts = _entities.Expenses.Max(x => x.Quantity);
+            var verySalesProducts2 = _entities.Expenses.Where(x => x.Quantity >= verySalesProducts).Select(x => x.Products.Name).FirstOrDefault();
 
             lblMaxPriceProduct.Text = maxPriceProducts + " - " + maxPriceProducts2 + " ₺" + "\n";
             lblMinPriceProduct.Text = minPriceProducts2 + " - " + minPriceProducts + " ₺" + "\n";

@@ -104,7 +104,7 @@ namespace TechnicService.Forms
             // 
             this.lblPurches.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPurches.Appearance.Options.UseFont = true;
-            this.lblPurches.Location = new System.Drawing.Point(54, 83);
+            this.lblPurches.Location = new System.Drawing.Point(15, 83);
             this.lblPurches.Name = "lblPurches";
             this.lblPurches.Size = new System.Drawing.Size(44, 48);
             this.lblPurches.TabIndex = 80;
@@ -148,7 +148,7 @@ namespace TechnicService.Forms
             // 
             this.lblExpenses.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExpenses.Appearance.Options.UseFont = true;
-            this.lblExpenses.Location = new System.Drawing.Point(54, 83);
+            this.lblExpenses.Location = new System.Drawing.Point(15, 83);
             this.lblExpenses.Name = "lblExpenses";
             this.lblExpenses.Size = new System.Drawing.Size(44, 48);
             this.lblExpenses.TabIndex = 80;
@@ -180,7 +180,7 @@ namespace TechnicService.Forms
             // 
             this.lblOutOfStock.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblOutOfStock.Appearance.Options.UseFont = true;
-            this.lblOutOfStock.Location = new System.Drawing.Point(54, 83);
+            this.lblOutOfStock.Location = new System.Drawing.Point(74, 83);
             this.lblOutOfStock.Name = "lblOutOfStock";
             this.lblOutOfStock.Size = new System.Drawing.Size(44, 48);
             this.lblOutOfStock.TabIndex = 80;
@@ -212,7 +212,7 @@ namespace TechnicService.Forms
             // 
             this.lblStockCount.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblStockCount.Appearance.Options.UseFont = true;
-            this.lblStockCount.Location = new System.Drawing.Point(54, 83);
+            this.lblStockCount.Location = new System.Drawing.Point(64, 83);
             this.lblStockCount.Name = "lblStockCount";
             this.lblStockCount.Size = new System.Drawing.Size(44, 48);
             this.lblStockCount.TabIndex = 80;

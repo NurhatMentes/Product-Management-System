@@ -233,6 +233,16 @@ namespace TechnicService
             this.exportToPNGChartItem1 = new DevExpress.XtraCharts.UI.ExportToPNGChartItem();
             this.exportToTIFFChartItem1 = new DevExpress.XtraCharts.UI.ExportToTIFFChartItem();
             this.barMounthSell = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem2 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteDropDownButtonItem3 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.skinPaletteRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
+            this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
+            this.barReport = new DevExpress.XtraBars.BarButtonItem();
             this.chartRibbonPageCategory1 = new DevExpress.XtraCharts.UI.ChartRibbonPageCategory();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -243,6 +253,9 @@ namespace TechnicService
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -255,7 +268,6 @@ namespace TechnicService
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.object_fb82c02e_96b3_4b5a_b67f_910240153e88 = new DevExpress.XtraCharts.ChartControl();
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
@@ -272,6 +284,7 @@ namespace TechnicService
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.object_6369f2a5_777c_42b7_a24e_1ab34eeddc3f)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -354,10 +367,18 @@ namespace TechnicService
             this.exportToTIFFChartItem1,
             this.createExportToImageBaseItem1,
             this.barMounthSell,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.skinDropDownButtonItem2,
+            this.skinPaletteDropDownButtonItem3,
+            this.skinRibbonGalleryBarItem1,
+            this.skinPaletteRibbonGalleryBarItem1,
+            this.skinRibbonGalleryBarItem2,
+            this.skinPaletteRibbonGalleryBarItem2,
+            this.barEditItem4,
+            this.barReport});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 108;
+            this.ribbonControl1.MaxItemId = 116;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -365,7 +386,8 @@ namespace TechnicService
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
             this.ribbonPage4,
-            this.ribbonPage5});
+            this.ribbonPage5,
+            this.ribbonPage6});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCalcEdit1,
             this.repositoryItemColorPickEdit1,
@@ -373,7 +395,8 @@ namespace TechnicService
             this.selectSeriesRepositoryItemComboBox1,
             this.changeSeriesViewRepositoryItemComboBox1,
             this.selectAxisMeasureUnitRepositoryItemComboBox1,
-            this.selectPeriodRepositoryItemComboBox1});
+            this.selectPeriodRepositoryItemComboBox1,
+            this.repositoryItemColorEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.Size = new System.Drawing.Size(1209, 161);
             // 
@@ -1673,6 +1696,72 @@ namespace TechnicService
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barMounthSell.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barMounthSell_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Yıllık Satış Ve Ortalama";
+            this.barButtonItem3.Id = 107;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // skinDropDownButtonItem2
+            // 
+            this.skinDropDownButtonItem2.Id = 108;
+            this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
+            // 
+            // skinPaletteDropDownButtonItem3
+            // 
+            this.skinPaletteDropDownButtonItem3.Id = 109;
+            this.skinPaletteDropDownButtonItem3.Name = "skinPaletteDropDownButtonItem3";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 110;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // skinPaletteRibbonGalleryBarItem1
+            // 
+            this.skinPaletteRibbonGalleryBarItem1.Caption = "skinPaletteRibbonGalleryBarItem1";
+            this.skinPaletteRibbonGalleryBarItem1.Id = 111;
+            this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
+            // 
+            // skinRibbonGalleryBarItem2
+            // 
+            this.skinRibbonGalleryBarItem2.Caption = "skinRibbonGalleryBarItem2";
+            this.skinRibbonGalleryBarItem2.Id = 112;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
+            // 
+            // skinPaletteRibbonGalleryBarItem2
+            // 
+            this.skinPaletteRibbonGalleryBarItem2.Caption = "skinPaletteRibbonGalleryBarItem2";
+            this.skinPaletteRibbonGalleryBarItem2.Id = 113;
+            this.skinPaletteRibbonGalleryBarItem2.Name = "skinPaletteRibbonGalleryBarItem2";
+            // 
+            // barEditItem4
+            // 
+            this.barEditItem4.Caption = "barEditItem4";
+            this.barEditItem4.Edit = this.repositoryItemColorEdit1;
+            this.barEditItem4.Id = 114;
+            this.barEditItem4.Name = "barEditItem4";
+            // 
+            // repositoryItemColorEdit1
+            // 
+            this.repositoryItemColorEdit1.AutoHeight = false;
+            this.repositoryItemColorEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemColorEdit1.Name = "repositoryItemColorEdit1";
+            // 
+            // barReport
+            // 
+            this.barReport.Caption = "Rapor Oluşturucu";
+            this.barReport.Id = 115;
+            this.barReport.ImageOptions.LargeImage = global::TechnicService.Properties.Resources.report_32x32;
+            this.barReport.Name = "barReport";
+            this.barReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barReport_ItemClick);
+            // 
             // chartRibbonPageCategory1
             // 
             this.chartRibbonPageCategory1.Control = null;
@@ -1687,7 +1776,6 @@ namespace TechnicService
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.skinDropDownButtonItem1);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnMalfunctions);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -1721,7 +1809,8 @@ namespace TechnicService
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup10});
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "İstatistikler";
             // 
@@ -1735,6 +1824,24 @@ namespace TechnicService
             this.ribbonPageGroup8.ItemLinks.Add(this.barMounthSell);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.barReport);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup9});
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "Görünüm";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
+            this.ribbonPageGroup9.ItemLinks.Add(this.skinPaletteRibbonGalleryBarItem2);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // ribbonPage1
             // 
@@ -1867,16 +1974,6 @@ namespace TechnicService
             this.chartBarController1.BarItems.Add(this.createExportToImageBaseItem1);
             this.chartBarController1.BarItems.Add(this.createExportBaseItem1);
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Yıllık Satış Ve Ortalama";
-            this.barButtonItem3.Id = 107;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1907,6 +2004,7 @@ namespace TechnicService
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.object_6369f2a5_777c_42b7_a24e_1ab34eeddc3f)).EndInit();
@@ -2026,5 +2124,17 @@ namespace TechnicService
         private DevExpress.XtraCharts.UI.ChartBarController chartBarController1;
         private DevExpress.XtraBars.BarButtonItem barMounthSell;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem2;
+        private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem3;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.BarEditItem barEditItem4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemColorEdit repositoryItemColorEdit1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem barReport;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
     }
 }

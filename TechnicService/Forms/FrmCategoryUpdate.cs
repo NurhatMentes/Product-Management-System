@@ -59,5 +59,10 @@ namespace TechnicService.Forms
         {
             this.Close();
         }
+
+        private void btnIgnore_Click(object sender, EventArgs e)
+        {
+            this.Close();;
+        }
     }
 }

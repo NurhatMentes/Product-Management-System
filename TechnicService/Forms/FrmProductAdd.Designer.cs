@@ -225,7 +225,8 @@ namespace TechnicService.Forms
             // 
             // cbxCategory
             // 
-            this.cbxCategory.Location = new System.Drawing.Point(967, 164);
+            this.cbxCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxCategory.Location = new System.Drawing.Point(715, 164);
             this.cbxCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
