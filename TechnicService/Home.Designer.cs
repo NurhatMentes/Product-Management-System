@@ -243,13 +243,15 @@ namespace TechnicService
             this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
             this.barReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barcCustormer = new DevExpress.XtraBars.BarButtonItem();
             this.chartRibbonPageCategory1 = new DevExpress.XtraCharts.UI.ChartRibbonPageCategory();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -303,8 +305,18 @@ namespace TechnicService
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(29, 30, 29, 30);
+            this.ribbonControl1.AutoSizeItems = true;
+            this.ribbonControl1.AutoUpdateMergedRibbons = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.BackColor = System.Drawing.Color.White;
+            this.ribbonControl1.ButtonGroupsLayout = DevExpress.XtraBars.ButtonGroupsLayout.Auto;
+            this.ribbonControl1.ButtonGroupsVertAlign = DevExpress.Utils.VertAlignment.Center;
+            this.ribbonControl1.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Orange;
+            this.ribbonControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(25, 30, 25, 30);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.ExpandCollapseItem.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonControl1.ExpandCollapseItem.ItemAppearance.Normal.Options.UseFont = true;
+            this.ribbonControl1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
@@ -375,19 +387,27 @@ namespace TechnicService
             this.skinRibbonGalleryBarItem2,
             this.skinPaletteRibbonGalleryBarItem2,
             this.barEditItem4,
-            this.barReport});
+            this.barReport,
+            this.barcCustormer});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 116;
+            this.ribbonControl1.MaxItemId = 117;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 329;
+            this.ribbonControl1.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.OptionsMenuMinWidth = 288;
+            this.ribbonControl1.OptionsPageCategories.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageCategoryAlignment.Right;
+            this.ribbonControl1.OptionsStubGlyphs.ColorMode = DevExpress.Utils.Drawing.GlyphColorMode.Black;
+            this.ribbonControl1.OptionsStubGlyphs.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonControl1.OptionsStubGlyphs.UseFont = true;
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.chartRibbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage3,
             this.ribbonPage4,
+            this.ribbonPage3,
             this.ribbonPage5,
             this.ribbonPage6});
+            this.ribbonControl1.SetPopupContextMenu(this.ribbonControl1, this.commandBarGalleryDropDown5);
+            this.ribbonControl1.PopupShowMode = DevExpress.XtraBars.PopupShowMode.Inplace;
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCalcEdit1,
             this.repositoryItemColorPickEdit1,
@@ -397,8 +417,14 @@ namespace TechnicService
             this.selectAxisMeasureUnitRepositoryItemComboBox1,
             this.selectPeriodRepositoryItemComboBox1,
             this.repositoryItemColorEdit1});
+            this.ribbonControl1.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Center;
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(1209, 161);
+            this.ribbonControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.ShowMoreCommandsButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.ShowSearchItem = true;
+            this.ribbonControl1.Size = new System.Drawing.Size(1306, 179);
+            this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // btnMalfunction
             // 
@@ -419,9 +445,17 @@ namespace TechnicService
             // 
             // btnMalfunctions
             // 
-            this.btnMalfunctions.Caption = "Arızalı Ürünler";
+            this.btnMalfunctions.Caption = "Teknik Servis";
             this.btnMalfunctions.Id = 5;
             this.btnMalfunctions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMalfunctions.ImageOptions.Image")));
+            this.btnMalfunctions.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMalfunctions.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnMalfunctions.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMalfunctions.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnMalfunctions.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMalfunctions.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnMalfunctions.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMalfunctions.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnMalfunctions.Name = "btnMalfunctions";
             this.btnMalfunctions.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnMalfunctions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMalfunctions_ItemClick);
@@ -431,6 +465,14 @@ namespace TechnicService
             this.btnProducts.Caption = "Ürünler";
             this.btnProducts.Id = 7;
             this.btnProducts.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.ImageOptions.Image")));
+            this.btnProducts.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnProducts.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnProducts.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnProducts.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnProducts.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnProducts.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnProducts.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnProducts.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -441,6 +483,12 @@ namespace TechnicService
             this.btnCategory.Caption = "Kategoriler";
             this.btnCategory.Id = 9;
             this.btnCategory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.ImageOptions.Image")));
+            this.btnCategory.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCategory.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnCategory.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCategory.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnCategory.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCategory.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnCategory.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCategoryAdd),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCategoryDelete),
@@ -487,6 +535,14 @@ namespace TechnicService
             this.barProductAdd.Caption = "Ürün Ekle";
             this.barProductAdd.Id = 18;
             this.barProductAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barProductAdd.ImageOptions.Image")));
+            this.barProductAdd.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductAdd.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barProductAdd.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductAdd.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barProductAdd.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductAdd.ItemAppearance.Normal.Options.UseFont = true;
+            this.barProductAdd.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductAdd.ItemAppearance.Pressed.Options.UseFont = true;
             this.barProductAdd.Name = "barProductAdd";
             this.barProductAdd.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -499,6 +555,14 @@ namespace TechnicService
             this.barProductUpdate.Id = 19;
             this.barProductUpdate.ImageOptions.Image = global::TechnicService.Properties.Resources.refreshallpivottable_16x161;
             this.barProductUpdate.ImageOptions.LargeImage = global::TechnicService.Properties.Resources.refreshallpivottable_32x321;
+            this.barProductUpdate.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductUpdate.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barProductUpdate.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductUpdate.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barProductUpdate.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductUpdate.ItemAppearance.Normal.Options.UseFont = true;
+            this.barProductUpdate.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barProductUpdate.ItemAppearance.Pressed.Options.UseFont = true;
             this.barProductUpdate.Name = "barProductUpdate";
             this.barProductUpdate.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -510,6 +574,14 @@ namespace TechnicService
             this.barButtonItem1.Caption = "Satış";
             this.barButtonItem1.Id = 20;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem1.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem1.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem1.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -574,6 +646,14 @@ namespace TechnicService
             this.barButtonItem2.Caption = "İstatistikler";
             this.barButtonItem2.Id = 25;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem2.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem2.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem2.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem2.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem2.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -1538,7 +1618,7 @@ namespace TechnicService
             // 
             // 
             this.changeAppearanceGalleryBaseItem1.Gallery.ColumnCount = 7;
-            this.changeAppearanceGalleryBaseItem1.Gallery.ImageSize = new System.Drawing.Size(100, 62);
+            this.changeAppearanceGalleryBaseItem1.Gallery.ImageSize = new System.Drawing.Size(87, 62);
             this.changeAppearanceGalleryBaseItem1.Gallery.RowCount = 4;
             this.changeAppearanceGalleryBaseItem1.Id = 87;
             this.changeAppearanceGalleryBaseItem1.Name = "changeAppearanceGalleryBaseItem1";
@@ -1691,6 +1771,14 @@ namespace TechnicService
             this.barMounthSell.Caption = "Aylık Satışlar";
             this.barMounthSell.Id = 106;
             this.barMounthSell.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barMounthSell.ImageOptions.Image")));
+            this.barMounthSell.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barMounthSell.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barMounthSell.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barMounthSell.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barMounthSell.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barMounthSell.ItemAppearance.Normal.Options.UseFont = true;
+            this.barMounthSell.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barMounthSell.ItemAppearance.Pressed.Options.UseFont = true;
             this.barMounthSell.Name = "barMounthSell";
             this.barMounthSell.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -1701,6 +1789,14 @@ namespace TechnicService
             this.barButtonItem3.Caption = "Yıllık Satış Ve Ortalama";
             this.barButtonItem3.Id = 107;
             this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem3.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem3.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonItem3.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -1731,6 +1827,8 @@ namespace TechnicService
             // skinRibbonGalleryBarItem2
             // 
             this.skinRibbonGalleryBarItem2.Caption = "skinRibbonGalleryBarItem2";
+            this.skinRibbonGalleryBarItem2.CloseSubMenuOnClickMode = DevExpress.Utils.DefaultBoolean.True;
+            this.skinRibbonGalleryBarItem2.GalleryDropDown = this.commandBarGalleryDropDown2;
             this.skinRibbonGalleryBarItem2.Id = 112;
             this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
             // 
@@ -1759,32 +1857,48 @@ namespace TechnicService
             this.barReport.Caption = "Rapor Oluşturucu";
             this.barReport.Id = 115;
             this.barReport.ImageOptions.LargeImage = global::TechnicService.Properties.Resources.report_32x32;
+            this.barReport.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barReport.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barReport.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barReport.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barReport.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barReport.ItemAppearance.Normal.Options.UseFont = true;
+            this.barReport.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barReport.ItemAppearance.Pressed.Options.UseFont = true;
             this.barReport.Name = "barReport";
             this.barReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barReport_ItemClick);
+            // 
+            // barcCustormer
+            // 
+            this.barcCustormer.Caption = "Cari Kart";
+            this.barcCustormer.Id = 116;
+            this.barcCustormer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barcCustormer.ImageOptions.Image")));
+            this.barcCustormer.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barcCustormer.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barcCustormer.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barcCustormer.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barcCustormer.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barcCustormer.ItemAppearance.Normal.Options.UseFont = true;
+            this.barcCustormer.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barcCustormer.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barcCustormer.Name = "barcCustormer";
+            this.barcCustormer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // chartRibbonPageCategory1
             // 
             this.chartRibbonPageCategory1.Control = null;
             this.chartRibbonPageCategory1.Name = "chartRibbonPageCategory1";
             // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Arızalı Ürünler";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnMalfunctions);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            // 
             // ribbonPage4
             // 
+            this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage4.Appearance.Options.UseFont = true;
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup11});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Ürünler";
             // 
@@ -1805,8 +1919,29 @@ namespace TechnicService
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.barcCustormer);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Teknik Servis";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnMalfunctions);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
             // ribbonPage5
             // 
+            this.ribbonPage5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage5.Appearance.Options.UseFont = true;
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup8,
@@ -1832,6 +1967,8 @@ namespace TechnicService
             // 
             // ribbonPage6
             // 
+            this.ribbonPage6.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage6.Appearance.Options.UseFont = true;
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup9});
             this.ribbonPage6.Name = "ribbonPage6";
@@ -1976,15 +2113,17 @@ namespace TechnicService
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1209, 722);
+            this.ClientSize = new System.Drawing.Size(1306, 723);
             this.Controls.Add(this.ribbonControl1);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Home.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home";
+            this.Ribbon = this.ribbonControl1;
             this.Text = "MBS Teknik Servis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Load);
@@ -2136,5 +2275,7 @@ namespace TechnicService
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barReport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem barcCustormer;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
     }
 }

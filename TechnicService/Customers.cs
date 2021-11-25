@@ -14,6 +14,12 @@ namespace TechnicService
     
     public partial class Customers
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customers()
+        {
+            this.Products = new HashSet<Products>();
+        }
+    
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -25,5 +31,9 @@ namespace TechnicService
         public string TaxAdministration { get; set; }
         public string TaxNo { get; set; }
         public bool Status { get; set; }
+        public string Website { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Products> Products { get; set; }
     }
 }

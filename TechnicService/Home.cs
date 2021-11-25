@@ -12,7 +12,7 @@ using TechnicService.Forms;
 
 namespace TechnicService
 {
-    public partial class Home : Form
+    public partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         FrmProductList frmProductList ;
         private Forms.FrmMalfunction frmMalfunction;

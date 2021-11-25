@@ -44,7 +44,9 @@ namespace TechnicService.Forms
             // lblSumPrice
             // 
             this.lblSumPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSumPrice.Appearance.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSumPrice.Appearance.Options.UseFont = true;
+            this.lblSumPrice.Appearance.Options.UseForeColor = true;
             this.lblSumPrice.Location = new System.Drawing.Point(12, 742);
             this.lblSumPrice.Name = "lblSumPrice";
             this.lblSumPrice.Size = new System.Drawing.Size(118, 24);
@@ -86,7 +88,7 @@ namespace TechnicService.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tomato;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1789, 778);
             this.Controls.Add(this.lblSumPrice);
             this.Controls.Add(this.chartControl1);

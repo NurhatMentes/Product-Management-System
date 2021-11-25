@@ -48,14 +48,6 @@ namespace TechnicService.Forms
                     Durum = x.Status ? "Teslim Edildi"  : "Teslim edilmedi" 
                 };
             dtList.DataSource = values.ToList();
-
-            //foreach (DataGridViewRow row in dtList.BackColor)
-            //{
-            //    if (row.Cells[5].Value.ToString() == "Pasif")
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.Red;
-            //    }
-            //}
         }
         private void FrmMalfunction_Load(object sender, EventArgs e)
         {
@@ -98,15 +90,6 @@ namespace TechnicService.Forms
                     MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Random random = new Random();
-                    int rnd1 = random.Next(100, 999);
-                    int kod = random.Next(65, 91);
-                    int kod2 = random.Next(65, 91);
-                    int kod3 = random.Next(65, 91);
-                    char rnd2 = Convert.ToChar(kod);
-                    char rnd3 = Convert.ToChar(kod2);
-                    char rnd4 = Convert.ToChar(kod3);
-
                     _malfunctions.Title = char.ToUpper(textEdit1.Text[0]).ToString()+ textEdit1.Text.Substring(1);
                     _malfunctions.Problem = char.ToUpper(txtProblem.Text[0]).ToString() + txtProblem.Text.Substring(1);
                     _malfunctions.Description = char.ToUpper(txtDescription.Text[0]).ToString() + txtDescription.Text.Substring(1);
@@ -116,8 +99,8 @@ namespace TechnicService.Forms
                     _malfunctions.CustomerFirstName = char.ToUpper(txtFirstName.Text[0]).ToString() + txtFirstName.Text.Substring(1);
                     _malfunctions.CustomerLastName = char.ToUpper(txtLastName.Text[0]).ToString() + txtLastName.Text.Substring(1);
                     _malfunctions.CustomerPhone = char.ToUpper(txtPhone.Text[0]).ToString() + txtPhone.Text.Substring(1);
-                    _malfunctions.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
-                    _malfunctionUpdate.SerialNo = rnd1.ToString() + rnd2 + rnd3 + rnd4;
+                    _malfunctions.SerialNo = txtSeriNo.ToString();
+                    _malfunctionUpdate.SerialNo = txtSeriNo.ToString();
                     _entities.MalfunctionUpdate.Add(_malfunctionUpdate);
                     _entities.Malfunctions.Add(_malfunctions);
                     try

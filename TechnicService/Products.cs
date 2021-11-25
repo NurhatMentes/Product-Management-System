@@ -29,9 +29,11 @@ namespace TechnicService
         public int stock { get; set; }
         public bool Status { get; set; }
         public string BarcodeNo { get; set; }
+        public Nullable<int> CustomerId { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Expenses> Expenses { get; set; }
+        public virtual Customers Customers { get; set; }
     }
 }

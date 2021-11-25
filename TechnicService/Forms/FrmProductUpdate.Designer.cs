@@ -147,7 +147,6 @@ namespace TechnicService.Forms
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStock.Properties.Appearance.Options.UseFont = true;
-            this.txtStock.Properties.BeepOnError = false;
             this.txtStock.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStock.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -163,7 +162,6 @@ namespace TechnicService.Forms
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPurchase.Properties.Appearance.Options.UseFont = true;
-            this.txtPurchase.Properties.BeepOnError = false;
             this.txtPurchase.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -221,7 +219,6 @@ namespace TechnicService.Forms
             this.txtSalesPrice.Name = "txtSalesPrice";
             this.txtSalesPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSalesPrice.Properties.Appearance.Options.UseFont = true;
-            this.txtSalesPrice.Properties.BeepOnError = false;
             this.txtSalesPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -287,12 +284,12 @@ namespace TechnicService.Forms
             // 
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(67, 182);
+            this.pictureEdit1.Location = new System.Drawing.Point(67, 192);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(543, 418);
+            this.pictureEdit1.Size = new System.Drawing.Size(590, 408);
             this.pictureEdit1.TabIndex = 53;
             // 
             // FrmProductUpdate

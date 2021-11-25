@@ -117,21 +117,21 @@ namespace TechnicService.Forms
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Controls.Add(this.lblPurches);
-            this.panel1.Location = new System.Drawing.Point(1348, 110);
+            this.panel1.Location = new System.Drawing.Point(1370, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 211);
+            this.panel1.Size = new System.Drawing.Size(374, 211);
             this.panel1.TabIndex = 81;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.BackColor = System.Drawing.Color.MistyRose;
+            this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel2.Controls.Add(this.labelControl3);
             this.panel2.Controls.Add(this.lblExpenses);
-            this.panel2.Location = new System.Drawing.Point(1696, 110);
+            this.panel2.Location = new System.Drawing.Point(1768, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 211);
+            this.panel2.Size = new System.Drawing.Size(374, 211);
             this.panel2.TabIndex = 82;
             // 
             // labelControl3
@@ -158,12 +158,12 @@ namespace TechnicService.Forms
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.BackColor = System.Drawing.Color.Coral;
+            this.panel3.BackColor = System.Drawing.Color.OldLace;
             this.panel3.Controls.Add(this.labelControl2);
             this.panel3.Controls.Add(this.lblOutOfStock);
-            this.panel3.Location = new System.Drawing.Point(1696, 376);
+            this.panel3.Location = new System.Drawing.Point(1768, 376);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(283, 211);
+            this.panel3.Size = new System.Drawing.Size(374, 211);
             this.panel3.TabIndex = 84;
             // 
             // labelControl2
@@ -190,12 +190,12 @@ namespace TechnicService.Forms
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel4.BackColor = System.Drawing.Color.Linen;
             this.panel4.Controls.Add(this.labelControl5);
             this.panel4.Controls.Add(this.lblStockCount);
-            this.panel4.Location = new System.Drawing.Point(1348, 376);
+            this.panel4.Location = new System.Drawing.Point(1370, 376);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(283, 211);
+            this.panel4.Size = new System.Drawing.Size(374, 211);
             this.panel4.TabIndex = 83;
             // 
             // labelControl5
@@ -223,7 +223,7 @@ namespace TechnicService.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(2006, 778);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);

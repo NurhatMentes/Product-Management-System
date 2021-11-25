@@ -21,6 +21,7 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="nchar" MaxLength="11" Nullable="false" />
           <Property Name="Mail" Type="nchar" MaxLength="30" />
+          <Property Name="Website" Type="nvarchar" MaxLength="150" />
           <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Province" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="District" Type="nchar" MaxLength="20" Nullable="false" />
@@ -67,10 +68,11 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Purchase" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="SalesPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Purchase" Type="smallmoney" Nullable="false" />
+          <Property Name="SalesPrice" Type="smallmoney" Nullable="false" />
           <Property Name="stock" Type="int" Nullable="false" />
           <Property Name="BarcodeNo" Type="nvarchar" MaxLength="20" />
           <Property Name="Status" Type="bit" Nullable="false" />
@@ -128,6 +130,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Products_Customers">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbStoreContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
@@ -144,6 +158,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Products_Category" Association="Self.FK_Products_Category">
             <End Role="Category" EntitySet="Category" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Customers" Association="Self.FK_Products_Customers">
+            <End Role="Customers" EntitySet="Customers" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
@@ -174,6 +192,8 @@
           <Property Name="TaxAdministration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Website" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Db.FK_Products_Customers" FromRole="Customers" ToRole="Products" />
         </EntityType>
         <EntityType Name="Expenses">
           <Key>
@@ -209,13 +229,15 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Purchase" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="SalesPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Purchase" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="SalesPrice" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
           <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Products_Category" FromRole="Products" ToRole="Category" />
           <Property Name="BarcodeNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Expenses" Relationship="Db.FK_Expenses_Products" FromRole="Products" ToRole="Expenses" />
+          <Property Name="CustomerId" Type="Int32" />
+          <NavigationProperty Name="Customers" Relationship="Db.FK_Products_Customers" FromRole="Products" ToRole="Customers" />
         </EntityType>
         <EntityType Name="Revenues">
           <Key>
@@ -276,6 +298,10 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="Expenses" EntitySet="Expenses" />
           </AssociationSet>
+          <AssociationSet Name="FK_Products_Customers" Association="Db.FK_Products_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="MalfunctionUpdate">
           <Key>
@@ -297,6 +323,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Products_Customers">
+          <End Type="Db.Customers" Role="Customers" Multiplicity="0..1" />
+          <End Type="Db.Products" Role="Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -314,6 +352,7 @@
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="Db.Customers">
               <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Website" ColumnName="Website" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -358,6 +397,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="Db.Products">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="BarcodeNo" ColumnName="BarcodeNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />

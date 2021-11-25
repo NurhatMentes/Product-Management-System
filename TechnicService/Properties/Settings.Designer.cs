@@ -26,8 +26,8 @@ namespace TechnicService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TechnicService;Integrated Secu" +
-            "rity=True;MultipleActiveResultSets=True;Application Name=EntityFramework")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Sourcşe=(localdb)\\MSSQLLocalDB;Initial Catalog=TechnicService;Integrated Sec" +
+            "urity=True;MultipleActiveResultSets=True;Application Name=EntityFramework")]
         public string TechnicServiceConnectionString {
             get {
                 return ((string)(this["TechnicServiceConnectionString"]));
