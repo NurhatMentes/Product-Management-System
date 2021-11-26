@@ -20,13 +20,13 @@ namespace TechnicService.Forms
         }
 
         private TechnicServiceEntities _entities = new TechnicServiceEntities();
-        void ProductList()
+        public void ProductList()
         {
             var values = from x in _entities.Products
                 select new
                 {
                     x.Id,
-                    Başlık = x.Name,
+                    Ürün = x.Name,
                     Marka = x.Brand,
                     Kategori = x.Category.Name,
                     AlışFiyatı = x.Purchase,

@@ -1884,6 +1884,7 @@ namespace TechnicService
             this.barcCustormer.Name = "barcCustormer";
             this.barcCustormer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barcCustormer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barcCustormer_ItemClick);
             // 
             // chartRibbonPageCategory1
             // 

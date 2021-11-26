@@ -252,7 +252,6 @@ namespace TechnicService.Forms
         }
 
         #endregion
-        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -267,5 +266,6 @@ namespace TechnicService.Forms
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lblStockCount;
+        public DevExpress.XtraGrid.GridControl gridControl1;
     }
 }

@@ -309,7 +309,7 @@ namespace TechnicService.Forms
             this.btnAddMalfunction.Appearance.Options.UseFont = true;
             this.btnAddMalfunction.ImageOptions.Image = global::TechnicService.Properties.Resources.apply_32x32;
             this.btnAddMalfunction.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAddMalfunction.Location = new System.Drawing.Point(429, 558);
+            this.btnAddMalfunction.Location = new System.Drawing.Point(422, 640);
             this.btnAddMalfunction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMalfunction.Name = "btnAddMalfunction";
             this.btnAddMalfunction.Size = new System.Drawing.Size(917, 53);
@@ -690,9 +690,9 @@ namespace TechnicService.Forms
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.grpAdd);
             this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.pnlList);
-            this.Controls.Add(this.grpAdd);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMalfunction";
             this.Text = "Teknik Servis";

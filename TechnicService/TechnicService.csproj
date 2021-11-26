@@ -136,6 +136,12 @@
     <Compile Include="Forms\FrmCategoryUpdate.Designer.cs">
       <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmExpenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCategoryUpdate.resx">
       <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmExpenses.resx">
       <DependentUpon>FrmExpenses.cs</DependentUpon>

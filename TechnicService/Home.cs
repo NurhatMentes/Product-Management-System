@@ -21,8 +21,8 @@ namespace TechnicService
         FrmExpenses expenses;
         FrmStatistic statistic ;
         FrmStatistickMounthSell mounlyStatistic;
-        FrmStatistickAnnualSalesAndAverage annualStatistic ;
-
+        FrmStatistickAnnualSalesAndAverage annualStatistic ; 
+        FrmCustomer frmCustomer;
 
 
 
@@ -72,6 +72,9 @@ namespace TechnicService
                 frmProductList.MdiParent = this;
                 frmProductList.Show();
             }
+
+            frmProductList.MdiParent.Show();
+            frmProductList.ProductList();
         }
 
         private void barProductUpdate_ItemClick(object sender, ItemClickEventArgs e)
@@ -149,6 +152,16 @@ namespace TechnicService
         {
             Report report = new Report();
             report.Show();
+        }
+
+        private void barcCustormer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (frmCustomer == null || annualStatistic.IsDisposed)
+            {
+                frmCustomer = new FrmCustomer();
+                frmCustomer.MdiParent = this;
+                frmCustomer.Show();
+            }
         }
     }
 }
