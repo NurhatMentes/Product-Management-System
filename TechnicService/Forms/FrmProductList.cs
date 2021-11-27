@@ -67,13 +67,12 @@ namespace TechnicService.Forms
             ProductList();
         }
 
-
-        private void pictureEdit2_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result;
             result = MessageBox.Show("Ürünü silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
-            
+
             if (result == DialogResult.Yes)
             {
                 int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
@@ -82,20 +81,9 @@ namespace TechnicService.Forms
                 _entities.SaveChanges();
                 ProductList();
 
-                MessageBox.Show(product.Name + "" + "Ürünü başarıyla silindi", "Bilgi",MessageBoxButtons.OK,
+                MessageBox.Show(product.Name + "" + "Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-           
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-
-        }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

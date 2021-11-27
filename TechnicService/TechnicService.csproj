@@ -136,11 +136,23 @@
     <Compile Include="Forms\FrmCategoryUpdate.Designer.cs">
       <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCustomer.cs">
+    <Compile Include="Forms\FrmCustomerAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCustomer.Designer.cs">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    <Compile Include="Forms\FrmCustomerAdd.Designer.cs">
+      <DependentUpon>FrmCustomerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerUpdate.Designer.cs">
+      <DependentUpon>FrmCustomerUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmExpenses.cs">
       <SubType>Form</SubType>
@@ -263,8 +275,14 @@
     <EmbeddedResource Include="Forms\FrmCategoryUpdate.resx">
       <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCustomer.resx">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmCustomerAdd.resx">
+      <DependentUpon>FrmCustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerUpdate.resx">
+      <DependentUpon>FrmCustomerUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmExpenses.resx">
       <DependentUpon>FrmExpenses.cs</DependentUpon>
@@ -407,6 +425,9 @@
     <None Include="Resources\refreshallpivottable_16x161.png" />
     <None Include="Resources\report_32x32.png" />
     <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\removepivotfield_16x161.png" />
+    <None Include="Resources\cancel_32x322.png" />
+    <None Include="Resources\close_32x32.png" />
     <Content Include="TechnicServiceDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TechnicServiceDb.Context.cs</LastGenOutput>

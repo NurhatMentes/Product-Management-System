@@ -1,7 +1,7 @@
 ﻿
 namespace TechnicService.Forms
 {
-    partial class FrmCustomer
+    partial class FrmCustomerAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,11 @@ namespace TechnicService.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomerAdd));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDistrict = new DevExpress.XtraEditors.TextEdit();
+            this.txtProvince = new DevExpress.XtraEditors.TextEdit();
             this.txtAdress = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,10 +58,10 @@ namespace TechnicService.Forms
             this.tabFormPage2 = new DevExpress.XtraBars.TabFormPage();
             this.tabFormContentContainer2 = new DevExpress.XtraBars.TabFormContentContainer();
             this.tabFormPage1 = new DevExpress.XtraBars.TabFormPage();
-            this.txtProvince = new DevExpress.XtraEditors.TextEdit();
-            this.txtDistrict = new DevExpress.XtraEditors.TextEdit();
             this.fluentDesignFormContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProvince.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstName.Properties)).BeginInit();
@@ -69,8 +71,6 @@ namespace TechnicService.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvince.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -101,6 +101,30 @@ namespace TechnicService.Forms
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adres Bilgileri";
+            // 
+            // txtDistrict
+            // 
+            this.txtDistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDistrict.Location = new System.Drawing.Point(263, 75);
+            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDistrict.Name = "txtDistrict";
+            this.txtDistrict.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDistrict.Properties.Appearance.Options.UseFont = true;
+            this.txtDistrict.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDistrict.Size = new System.Drawing.Size(516, 32);
+            this.txtDistrict.TabIndex = 51;
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProvince.Location = new System.Drawing.Point(263, 35);
+            this.txtProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtProvince.Properties.Appearance.Options.UseFont = true;
+            this.txtProvince.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtProvince.Size = new System.Drawing.Size(516, 32);
+            this.txtProvince.TabIndex = 43;
             // 
             // txtAdress
             // 
@@ -232,9 +256,9 @@ namespace TechnicService.Forms
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.Location = new System.Drawing.Point(113, 265);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 24);
+            this.label10.Size = new System.Drawing.Size(140, 48);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Vergi Numarası\r\n";
+            this.label10.Text = "Vergi Daire No\r\n/TC Kimlik No";
             // 
             // txtTaxAdministration
             // 
@@ -253,7 +277,7 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(113, 155);
+            this.label9.Location = new System.Drawing.Point(113, 151);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 24);
             this.label9.TabIndex = 26;
@@ -276,11 +300,11 @@ namespace TechnicService.Forms
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(113, 44);
+            this.label11.Location = new System.Drawing.Point(113, 40);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 24);
+            this.label11.Size = new System.Drawing.Size(131, 24);
             this.label11.TabIndex = 21;
-            this.label11.Text = "*Ad";
+            this.label11.Text = "*Ünvanı (adı)";
             // 
             // txtPhone
             // 
@@ -301,11 +325,11 @@ namespace TechnicService.Forms
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(113, 82);
+            this.label12.Location = new System.Drawing.Point(113, 78);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 24);
+            this.label12.Size = new System.Drawing.Size(150, 24);
             this.label12.TabIndex = 23;
-            this.label12.Text = "Soyad";
+            this.label12.Text = "Ünvanı (soyadı)";
             // 
             // label13
             // 
@@ -378,42 +402,20 @@ namespace TechnicService.Forms
             this.tabFormPage1.Name = "tabFormPage1";
             this.tabFormPage1.Text = "Page 0";
             // 
-            // txtProvince
-            // 
-            this.txtProvince.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProvince.Location = new System.Drawing.Point(263, 35);
-            this.txtProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtProvince.Name = "txtProvince";
-            this.txtProvince.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtProvince.Properties.Appearance.Options.UseFont = true;
-            this.txtProvince.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtProvince.Size = new System.Drawing.Size(516, 32);
-            this.txtProvince.TabIndex = 43;
-            // 
-            // txtDistrict
-            // 
-            this.txtDistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDistrict.Location = new System.Drawing.Point(263, 75);
-            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDistrict.Properties.Appearance.Options.UseFont = true;
-            this.txtDistrict.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtDistrict.Size = new System.Drawing.Size(516, 32);
-            this.txtDistrict.TabIndex = 51;
-            // 
-            // FrmCustomer
+            // FrmCustomerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1719, 825);
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
-            this.Name = "FrmCustomer";
-            this.Text = "Cari Kart";
+            this.Name = "FrmCustomerAdd";
+            this.Text = "Cari Kart Yeni Kayıt";
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProvince.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -424,8 +426,6 @@ namespace TechnicService.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProvince.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

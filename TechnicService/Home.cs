@@ -14,15 +14,17 @@ namespace TechnicService
 {
     public partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        FrmProductList frmProductList ;
+        FrmProductList frmProductList;
         private Forms.FrmMalfunction frmMalfunction;
-        FrmProductUpdate update ;
+        FrmProductUpdate update;
         FrmProductAdd add;
         FrmExpenses expenses;
-        FrmStatistic statistic ;
+        FrmStatistic statistic;
         FrmStatistickMounthSell mounlyStatistic;
-        FrmStatistickAnnualSalesAndAverage annualStatistic ; 
-        FrmCustomer frmCustomer;
+        FrmStatistickAnnualSalesAndAverage annualStatistic;
+        FrmCustomerAdd frmCustomer;
+        FrmCustomerList frmCustomerList;
+        FrmCustomerUpdate frmCustomerUpdate;
 
 
 
@@ -36,12 +38,11 @@ namespace TechnicService
 
         private void btnMalfunctions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (frmMalfunction == null || frmMalfunction.IsDisposed)
-            {
-                frmMalfunction = new FrmMalfunction();
-                frmMalfunction.MdiParent = this;
-                frmMalfunction.Show();
-            }
+
+            frmMalfunction = new FrmMalfunction();
+            frmMalfunction.MdiParent = this;
+            frmMalfunction.Show();
+
         }
 
         private void btnCategoryAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -66,12 +67,11 @@ namespace TechnicService
         {
             barProductAdd.Visibility = BarItemVisibility.Always;
             barProductUpdate.Visibility = BarItemVisibility.Always;
-            if (frmProductList == null || frmProductList.IsDisposed)
-            {
-                frmProductList = new FrmProductList();
-                frmProductList.MdiParent = this;
-                frmProductList.Show();
-            }
+
+            frmProductList = new FrmProductList();
+            frmProductList.MdiParent = this;
+            frmProductList.Show();
+
 
             frmProductList.MdiParent.Show();
             frmProductList.ProductList();
@@ -79,74 +79,62 @@ namespace TechnicService
 
         private void barProductUpdate_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (update == null || update.IsDisposed)
-            {
-                update = new FrmProductUpdate();
-                update.MdiParent = this;
-                update.Show();
-            }
+
+            update = new FrmProductUpdate();
+            update.MdiParent = this;
+            update.Show();
+
         }
 
         private void barProductAdd_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (add == null || add.IsDisposed)
-            {
-                add = new FrmProductAdd();
-                add.MdiParent = this;
-                add.Show();
-            }
+
+            add = new FrmProductAdd();
+            add.MdiParent = this;
+            add.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            
-                frmProductList = new FrmProductList();
-                frmProductList.MdiParent = this;
-                frmProductList.Show();
-            
+
+            frmProductList = new FrmProductList();
+            frmProductList.MdiParent = this;
+            frmProductList.Show();
+
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (expenses == null || expenses.IsDisposed)
-            {
-                expenses = new FrmExpenses();
-                expenses.MdiParent = this;
-                expenses.Show();
-            }
+            expenses = new FrmExpenses();
+            expenses.MdiParent = this;
+            expenses.Show();
+
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (statistic == null || statistic.IsDisposed)
-            {
-                statistic = new FrmStatistic();
-                statistic.MdiParent = this;
-                statistic.Show();
-            }
+            statistic = new FrmStatistic();
+            statistic.MdiParent = this;
+            statistic.Show();
+
         }
 
         private void barMounthSell_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-            if (mounlyStatistic == null || mounlyStatistic.IsDisposed)
-            {
-                mounlyStatistic = new FrmStatistickMounthSell();
-                mounlyStatistic.MdiParent = this;
-                mounlyStatistic.Show();
-            }
+            mounlyStatistic = new FrmStatistickMounthSell();
+            mounlyStatistic.MdiParent = this;
+            mounlyStatistic.Show();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            if (annualStatistic == null || annualStatistic.IsDisposed)
-            {
-                annualStatistic = new FrmStatistickAnnualSalesAndAverage();
-                annualStatistic.MdiParent = this;
-                annualStatistic.Show();
-            }
+            annualStatistic = new FrmStatistickAnnualSalesAndAverage();
+            annualStatistic.MdiParent = this;
+            annualStatistic.Show();
+
         }
+
 
         private void barReport_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -156,12 +144,26 @@ namespace TechnicService
 
         private void barcCustormer_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (frmCustomer == null || annualStatistic.IsDisposed)
-            {
-                frmCustomer = new FrmCustomer();
-                frmCustomer.MdiParent = this;
-                frmCustomer.Show();
-            }
+            frmCustomerList = new FrmCustomerList();
+            frmCustomerList.MdiParent = this;
+            frmCustomerList.Show();
+            frmCustomerList.CustomerList();
+            barCustomerAdd.Visibility = BarItemVisibility.Always;
+            barCustomerUpdate.Visibility = BarItemVisibility.Always;
+        }
+
+        private void barCustomerAdd_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCustomer = new FrmCustomerAdd();
+            frmCustomer.MdiParent = this;
+            frmCustomer.Show();
+        }
+
+        private void barCustomerUpdate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCustomerUpdate = new FrmCustomerUpdate();
+            frmCustomerUpdate.MdiParent = this;
+            frmCustomerUpdate.Show();
         }
     }
 }

@@ -55,19 +55,27 @@ namespace TechnicService.Forms
         }
         private void btnProductUpdate_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult;
+
             if (txtName.Text != "" && Convert.ToInt32(cbxCategory.EditValue)>0&&txtbrand.Text!=""&&txtStock.Text !=""&&txtPurchase.Text!=""&&txtSalesPrice.Text!="")
             {
-               int id = Int32.Parse(cbxProduct.EditValue.ToString());
-               var product = _entities.Products.Find(id);
-               product.Name = char.ToUpper(txtName.Text[0]).ToString() + txtName.Text.Substring(1);
-               product.Brand = char.ToUpper(txtbrand.Text[0]).ToString() + txtbrand.Text.Substring(1); ;
-               product.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
-               product.Purchase = Convert.ToDecimal(txtPurchase.Text);
-               product.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
-               product.stock = Convert.ToInt32(txtStock.Text);
-               product.Status = Convert.ToInt32(txtStock.Text) > 0 ? true : false;
-                _entities.SaveChanges();
-                MessageBox.Show("Ürün başarı ile güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                var message = MessageBox.Show("Güncellemek istediğinize emin misini?", "Soru", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (message == DialogResult.Yes)
+                {
+                    int id = Int32.Parse(cbxProduct.EditValue.ToString());
+                    var product = _entities.Products.Find(id);
+                    product.Name = char.ToUpper(txtName.Text[0]).ToString() + txtName.Text.Substring(1);
+                    product.Brand = char.ToUpper(txtbrand.Text[0]).ToString() + txtbrand.Text.Substring(1); ;
+                    product.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
+                    product.Purchase = Convert.ToDecimal(txtPurchase.Text);
+                    product.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
+                    product.stock = Convert.ToInt32(txtStock.Text);
+                    product.Status = Convert.ToInt32(txtStock.Text) > 0 ? true : false;
+                    _entities.SaveChanges();
+                    MessageBox.Show("Ürün başarı ile güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                
             }
             else
             {

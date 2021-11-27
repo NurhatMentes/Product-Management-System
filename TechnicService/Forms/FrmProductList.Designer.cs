@@ -29,10 +29,8 @@ namespace TechnicService.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductList));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblPurches = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,9 +43,9 @@ namespace TechnicService.Forms
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lblStockCount = new DevExpress.XtraEditors.LabelControl();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,23 +69,6 @@ namespace TechnicService.Forms
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // pictureEdit2
-            // 
-            this.pictureEdit2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(1327, 11);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(57, 57);
-            this.pictureEdit2.TabIndex = 78;
-            this.pictureEdit2.Click += new System.EventHandler(this.pictureEdit2_Click);
             // 
             // labelControl1
             // 
@@ -98,7 +79,6 @@ namespace TechnicService.Forms
             this.labelControl1.Size = new System.Drawing.Size(175, 28);
             this.labelControl1.TabIndex = 79;
             this.labelControl1.Text = "Toplam Alış Fiyatı";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // lblPurches
             // 
@@ -218,6 +198,16 @@ namespace TechnicService.Forms
             this.lblStockCount.TabIndex = 80;
             this.lblStockCount.Text = "00";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.ImageOptions.Image = global::TechnicService.Properties.Resources.close_32x32;
+            this.btnDelete.Location = new System.Drawing.Point(523, 7);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(211, 29);
+            this.btnDelete.TabIndex = 85;
+            this.btnDelete.Text = "Kayıt Sil";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FrmProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,11 +215,11 @@ namespace TechnicService.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(2006, 778);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.gridControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmProductList";
@@ -238,7 +228,6 @@ namespace TechnicService.Forms
             this.Load += new System.EventHandler(this.FrmProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -253,7 +242,6 @@ namespace TechnicService.Forms
 
         #endregion
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblPurches;
         private System.Windows.Forms.Panel panel1;
@@ -267,5 +255,6 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lblStockCount;
         public DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
     }
 }

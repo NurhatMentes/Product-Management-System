@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TechnicService.Forms
 {
-    public partial class FrmCustomer : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCustomerAdd : DevExpress.XtraEditors.XtraForm
     {
-        public FrmCustomer()
+        public FrmCustomerAdd()
         {
             InitializeComponent();
         }
