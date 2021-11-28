@@ -8,9 +8,9 @@
         <EntityTypeShape EntityType="Db.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.Customers" Width="1.5" PointX="1" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.Expenses" Width="1.5" PointX="4" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Malfunctions" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Malfunctions" Width="1.5" PointX="6.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.Products" Width="1.5" PointX="3.875" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Revenues" Width="1.5" PointX="9.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Revenues" Width="1.5" PointX="9.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.sysdiagrams" Width="1.5" PointX="12.125" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.Users" Width="1.5" PointX="8" PointY="4" IsExpanded="true" />
         <AssociationConnector Association="Db.FK_Products_Category" ManuallyRouted="false" />

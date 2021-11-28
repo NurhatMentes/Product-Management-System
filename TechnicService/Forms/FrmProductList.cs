@@ -33,6 +33,7 @@ namespace TechnicService.Forms
                     SatışFiyatı = x.SalesPrice,
                     Stok = x.stock,
                     Barkod = x.BarcodeNo,
+                    Cari = x.Customers.FirstName,
                     Durum = x.Status ? "Stokta var" : "Stokta yok"
                 };
             gridControl1.DataSource = values.ToList();

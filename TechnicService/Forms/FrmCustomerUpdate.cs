@@ -27,6 +27,7 @@ namespace TechnicService.Forms
                   UnvanAd = x.FirstName
                 }).ToList();
         }
+
         void GetCustomer()
         {
             int customerId = Convert.ToInt32(cbxCustomer.EditValue);

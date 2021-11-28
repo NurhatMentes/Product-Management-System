@@ -26,7 +26,7 @@ namespace TechnicService.Forms
             var customerList = from x in _entities.Customers
                 select new
                 {
-                    Özel‏‏‏‏‏‏‏‏Kod = x.Id,
+                    ÖzelKod = x.Id,
                     ÜnvanıAdı = x.FirstName,
                     ÜnvanıSoyad = x.LastName,
                     Telefon = x.Phone,
@@ -48,6 +48,7 @@ namespace TechnicService.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            
             DialogResult result;
             result = MessageBox.Show("Cari kaydı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
@@ -64,6 +65,20 @@ namespace TechnicService.Forms
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+        }
+
+        private void gridCustomer_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void gridControl1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmCustomersProductList customersProductList = new FrmCustomersProductList();
+            int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ÖzelKod").ToString());
+
+            customersProductList.customerId = id;
+            customersProductList.Show();
         }
     }
 }

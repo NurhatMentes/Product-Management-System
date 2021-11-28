@@ -44,6 +44,7 @@ namespace TechnicService.Forms
             this.txtStock = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.cbxCategory = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxCustomer = new DevExpress.XtraEditors.LookUpEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBarcode = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalesPrice.Properties)).BeginInit();
@@ -53,6 +54,7 @@ namespace TechnicService.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCategory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarcode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@ namespace TechnicService.Forms
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(588, 118);
+            this.label6.Location = new System.Drawing.Point(599, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 22;
@@ -72,7 +74,7 @@ namespace TechnicService.Forms
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(588, 225);
+            this.label10.Location = new System.Drawing.Point(599, 347);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 24);
             this.label10.TabIndex = 23;
@@ -83,7 +85,7 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(588, 279);
+            this.label9.Location = new System.Drawing.Point(599, 401);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 24);
             this.label9.TabIndex = 24;
@@ -92,12 +94,11 @@ namespace TechnicService.Forms
             // txtSalesPrice
             // 
             this.txtSalesPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSalesPrice.Location = new System.Drawing.Point(715, 327);
+            this.txtSalesPrice.Location = new System.Drawing.Point(726, 449);
             this.txtSalesPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalesPrice.Name = "txtSalesPrice";
             this.txtSalesPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSalesPrice.Properties.Appearance.Options.UseFont = true;
-            this.txtSalesPrice.Properties.BeepOnError = false;
             this.txtSalesPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -110,7 +111,7 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(588, 333);
+            this.label8.Location = new System.Drawing.Point(599, 455);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 24);
             this.label8.TabIndex = 26;
@@ -121,7 +122,7 @@ namespace TechnicService.Forms
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(588, 384);
+            this.label7.Location = new System.Drawing.Point(599, 506);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 27;
@@ -130,7 +131,7 @@ namespace TechnicService.Forms
             // txtAdd
             // 
             this.txtAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAdd.Location = new System.Drawing.Point(715, 110);
+            this.txtAdd.Location = new System.Drawing.Point(726, 232);
             this.txtAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAdd.Name = "txtAdd";
             this.txtAdd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -149,10 +150,10 @@ namespace TechnicService.Forms
             this.btnProductAdd.Appearance.Options.UseFont = true;
             this.btnProductAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductAdd.ImageOptions.Image")));
             this.btnProductAdd.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnProductAdd.Location = new System.Drawing.Point(819, 510);
+            this.btnProductAdd.Location = new System.Drawing.Point(833, 601);
             this.btnProductAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductAdd.Name = "btnProductAdd";
-            this.btnProductAdd.Size = new System.Drawing.Size(271, 73);
+            this.btnProductAdd.Size = new System.Drawing.Size(246, 73);
             this.btnProductAdd.TabIndex = 32;
             this.btnProductAdd.Text = "Ekle";
             this.btnProductAdd.Click += new System.EventHandler(this.btnProductAdd_Click);
@@ -162,7 +163,7 @@ namespace TechnicService.Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(588, 170);
+            this.label1.Location = new System.Drawing.Point(599, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 24);
             this.label1.TabIndex = 35;
@@ -171,7 +172,7 @@ namespace TechnicService.Forms
             // txtbrand
             // 
             this.txtbrand.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbrand.Location = new System.Drawing.Point(715, 218);
+            this.txtbrand.Location = new System.Drawing.Point(726, 340);
             this.txtbrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbrand.Name = "txtbrand";
             this.txtbrand.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -183,12 +184,11 @@ namespace TechnicService.Forms
             // txtPurchase
             // 
             this.txtPurchase.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPurchase.Location = new System.Drawing.Point(715, 272);
+            this.txtPurchase.Location = new System.Drawing.Point(726, 394);
             this.txtPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPurchase.Properties.Appearance.Options.UseFont = true;
-            this.txtPurchase.Properties.BeepOnError = false;
             this.txtPurchase.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPurchase.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -199,12 +199,11 @@ namespace TechnicService.Forms
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(715, 377);
+            this.txtStock.Location = new System.Drawing.Point(726, 499);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStock.Properties.Appearance.Options.UseFont = true;
-            this.txtStock.Properties.BeepOnError = false;
             this.txtStock.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStock.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
@@ -215,7 +214,7 @@ namespace TechnicService.Forms
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(51, 73);
+            this.pictureEdit1.Location = new System.Drawing.Point(58, 75);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -226,7 +225,7 @@ namespace TechnicService.Forms
             // cbxCategory
             // 
             this.cbxCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxCategory.Location = new System.Drawing.Point(715, 164);
+            this.cbxCategory.Location = new System.Drawing.Point(726, 286);
             this.cbxCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -239,12 +238,27 @@ namespace TechnicService.Forms
             this.cbxCategory.Size = new System.Drawing.Size(516, 34);
             this.cbxCategory.TabIndex = 40;
             // 
+            // cbxCustomer
+            // 
+            this.cbxCustomer.Location = new System.Drawing.Point(969, 143);
+            this.cbxCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxCustomer.Name = "cbxCustomer";
+            this.cbxCustomer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxCustomer.Properties.Appearance.Options.UseFont = true;
+            this.cbxCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxCustomer.Properties.DisplayMember = "UnvanAd";
+            this.cbxCustomer.Properties.NullText = "Cari Seçiniz";
+            this.cbxCustomer.Properties.ValueMember = "ÖzelKod";
+            this.cbxCustomer.Size = new System.Drawing.Size(512, 34);
+            this.cbxCustomer.TabIndex = 57;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(588, 433);
+            this.label2.Location = new System.Drawing.Point(599, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 24);
             this.label2.TabIndex = 22;
@@ -253,7 +267,7 @@ namespace TechnicService.Forms
             // txtBarcode
             // 
             this.txtBarcode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBarcode.Location = new System.Drawing.Point(715, 422);
+            this.txtBarcode.Location = new System.Drawing.Point(726, 181);
             this.txtBarcode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -268,6 +282,7 @@ namespace TechnicService.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1701, 778);
+            this.Controls.Add(this.cbxCustomer);
             this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.txtStock);
@@ -295,6 +310,7 @@ namespace TechnicService.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCategory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarcode.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,6 +333,7 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.TextEdit txtStock;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LookUpEdit cbxCategory;
+        private DevExpress.XtraEditors.LookUpEdit cbxCustomer;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit txtBarcode;
     }

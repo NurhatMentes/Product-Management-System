@@ -20,25 +20,37 @@ namespace TechnicService.Forms
         private TechnicServiceEntities _entities = new TechnicServiceEntities();
         void CategorySelection()
         {
-            cbxCategory.Properties.DataSource = (from x in _entities.Category
+            cbxCategory.Properties.DataSource = (from x in _entities.Category 
                 select new
                 {
                     x.Id,
                     x.Name
-
                 }).ToList();
         }
+
+        void CustomerCategorySelection()
+        {
+            cbxCustomer.Properties.DataSource = (from x in _entities.Customers where x.Status==true
+                select new
+                {
+                    ÖzelKod = x.Id,
+                    UnvanAd = x.FirstName
+                }).ToList();
+        }
+
         private void FrmProductAdd_Load(object sender, EventArgs e)
         {
             CategorySelection();
+            CustomerCategorySelection();
         }
         private void btnProductAdd_Click(object sender, EventArgs e)
         {
-            if (txtAdd.Text != "")
+            if (txtAdd.Text != "" && txtbrand.Text !="" && txtPurchase.Text != "" && txtSalesPrice.Text != "" && txtStock.Text != "" && Convert.ToInt32(cbxCategory.EditValue)> 0)
             {
                 Products products = new Products();
-                products.Name = char.ToUpper(txtAdd.Text[0]).ToString() + txtAdd.Text.Substring(1);
-                products.Brand = char.ToUpper(txtbrand.Text[0]).ToString() + txtbrand.Text.Substring(1);
+                products.CustomerId = Convert.ToInt32(cbxCustomer.EditValue.ToString());
+                products.Name = char.ToUpper(txtAdd.Text[0]) + txtAdd.Text.Substring(1);
+                products.Brand = char.ToUpper(txtbrand.Text[0]) + txtbrand.Text.Substring(1);
                 products.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
                 products.Purchase = Convert.ToDecimal(txtPurchase.Text);
                 products.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
@@ -60,10 +72,6 @@ namespace TechnicService.Forms
             {
                 MessageBox.Show("Doldurulmayan alanları doldurunuz!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            
         }
-
-       
     }
 }

@@ -132,15 +132,6 @@ namespace TechnicService.Forms
                     
                 }).ToList();
         }
-        private void grdMalfunction_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-          
-        }
-
-        private void grdMalfunction_DoubleClick(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {

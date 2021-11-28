@@ -203,8 +203,6 @@ namespace TechnicService.Forms
             this.grdMalfunction.OptionsBehavior.ReadOnly = true;
             this.grdMalfunction.OptionsNavigation.AutoMoveRowFocus = false;
             this.grdMalfunction.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.False;
-            this.grdMalfunction.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdMalfunction_FocusedRowChanged);
-            this.grdMalfunction.DoubleClick += new System.EventHandler(this.grdMalfunction_DoubleClick);
             // 
             // grpAdd
             // 
@@ -690,9 +688,9 @@ namespace TechnicService.Forms
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.pnlList);
             this.Controls.Add(this.grpAdd);
             this.Controls.Add(this.grpUpdate);
-            this.Controls.Add(this.pnlList);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMalfunction";
             this.Text = "Teknik Servis";
