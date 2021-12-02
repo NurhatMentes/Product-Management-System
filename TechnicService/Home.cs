@@ -4,11 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.ReportServer.ServiceModel.ConnectionProviders;
 using DevExpress.XtraBars;
+using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 using TechnicService.Forms;
+
 
 namespace TechnicService
 {
@@ -101,6 +106,41 @@ namespace TechnicService
             frmProductList.MdiParent = this;
             frmProductList.Show();
 
+
+            //---------------Database backup---------------
+            string backupPath = @"E:\Yedekler/TechicService_" + DateTime.Today.Day + "." + DateTime.Today.Month + "." + DateTime.Today.Year + ".bak";
+            string server = @"(localdb)\MSSQLLocalDB";
+
+            string backupFolder ="E:\\Yedekler";
+            System.IO.Directory.CreateDirectory(backupFolder);
+
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(backupFolder);
+            System.IO.FileInfo[] fis = di.GetFiles("*.bak");
+            if (fis.Length == 0 || (DateTime.Now - fis.Max(d => d.CreationTime)).TotalMinutes >= 5)
+            { 
+                Server dbServer = new Server(new ServerConnection(server));
+                Backup dbBackup = new Backup();
+                dbBackup.Action = BackupActionType.Database;
+                dbBackup.Database = "TechnicService";
+                dbBackup.Devices.AddDevice(backupPath, DeviceType.File);
+                dbBackup.Initialize = false;
+                dbBackup.Complete += DbBackupOnComplete;
+                dbBackup.SqlBackup(dbServer);
+            }
+
+        }
+
+        private void DbBackupOnComplete(object sender, ServerMessageEventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Yedekleme Başarılı","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -166,4 +206,6 @@ namespace TechnicService
             frmCustomerUpdate.Show();
         }
     }
+
+    
 }

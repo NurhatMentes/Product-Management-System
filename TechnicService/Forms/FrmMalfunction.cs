@@ -162,15 +162,6 @@ namespace TechnicService.Forms
                 MessageBoxIcon.Asterisk);
         }
 
-        private void dtList_MouseDown(object sender, MouseEventArgs e)
-        {
-            FrmProsess frmProsess = new FrmProsess();
-            string id = grdMalfunction.GetFocusedRowCellValue("SerialNo").ToString();
-
-            frmProsess.malfunctionSerialNo = id;
-            frmProsess.Show();
-        }
-
         private void dtList_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             if (e.RowHandle >= 0)
@@ -191,6 +182,15 @@ namespace TechnicService.Forms
                     }
                 }
             }
+        }
+
+        private void dtList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmProsess frmProsess = new FrmProsess();
+            string id = grdMalfunction.GetFocusedRowCellValue("SerialNo").ToString();
+
+            frmProsess.malfunctionSerialNo = id;
+            frmProsess.Show();
         }
     }
 }

@@ -67,10 +67,6 @@ namespace TechnicService.Forms
             }
         }
 
-        private void gridCustomer_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
 
         private void gridControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {

@@ -191,7 +191,8 @@ namespace TechnicService.Forms
             this.dtList.TabIndex = 7;
             this.dtList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMalfunction});
-            this.dtList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtList_MouseDown);
+            this.dtList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtList_MouseDoubleClick);
+
             // 
             // grdMalfunction
             // 
