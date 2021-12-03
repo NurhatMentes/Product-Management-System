@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraScheduler.iCalendar.Components;
+using TechnicService.Core.Service;
 
 namespace TechnicService.Forms
 {
@@ -21,6 +22,7 @@ namespace TechnicService.Forms
         TechnicServiceEntities _entities = new TechnicServiceEntities();
         Expenses _expenses = new Expenses();
         Products _products = new Products();
+        UsdService _usdService = new UsdService();
 
         private void btnSell_Click(object sender, EventArgs e)
         {
@@ -39,7 +41,7 @@ namespace TechnicService.Forms
                 {
                     decimal saleRate = Int32.Parse(spinSale.Text);
                     decimal sale = saleRate / 100;
-                    decimal productPrice = decimal.Parse(txtprice.Text);
+                    decimal productPrice = decimal.Parse(txtprice.Text)*_usdService.Usd();
 
                     _expenses.Price = productPrice - (productPrice * sale);
                 }

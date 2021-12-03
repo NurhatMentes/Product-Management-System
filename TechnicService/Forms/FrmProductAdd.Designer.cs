@@ -63,7 +63,7 @@ namespace TechnicService.Forms
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(599, 240);
+            this.label6.Location = new System.Drawing.Point(578, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 22;
@@ -74,7 +74,7 @@ namespace TechnicService.Forms
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(599, 347);
+            this.label10.Location = new System.Drawing.Point(578, 348);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 24);
             this.label10.TabIndex = 23;
@@ -85,11 +85,11 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(599, 401);
+            this.label9.Location = new System.Drawing.Point(578, 402);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 24);
+            this.label9.Size = new System.Drawing.Size(133, 24);
             this.label9.TabIndex = 24;
-            this.label9.Text = "*Alış Fiyatı";
+            this.label9.Text = "*Alış Fiyatı($)";
             // 
             // txtSalesPrice
             // 
@@ -100,9 +100,11 @@ namespace TechnicService.Forms
             this.txtSalesPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSalesPrice.Properties.Appearance.Options.UseFont = true;
             this.txtSalesPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtSalesPrice.Properties.MaskSettings.Set("valueType", typeof(decimal));
+            this.txtSalesPrice.Properties.MaskSettings.Set("culture", "en-US");
             this.txtSalesPrice.Properties.MaskSettings.Set("mask", "c");
+            this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtSalesPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtSalesPrice.Size = new System.Drawing.Size(516, 32);
             this.txtSalesPrice.TabIndex = 25;
             // 
@@ -111,18 +113,18 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(599, 455);
+            this.label8.Location = new System.Drawing.Point(575, 455);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 24);
+            this.label8.Size = new System.Drawing.Size(140, 24);
             this.label8.TabIndex = 26;
-            this.label8.Text = "*Satış Fiyat";
+            this.label8.Text = "*Satış Fiyat($)";
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(599, 506);
+            this.label7.Location = new System.Drawing.Point(578, 507);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 27;
@@ -163,7 +165,7 @@ namespace TechnicService.Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(599, 292);
+            this.label1.Location = new System.Drawing.Point(578, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 24);
             this.label1.TabIndex = 35;
@@ -190,9 +192,10 @@ namespace TechnicService.Forms
             this.txtPurchase.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPurchase.Properties.Appearance.Options.UseFont = true;
             this.txtPurchase.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtPurchase.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtPurchase.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtPurchase.Properties.MaskSettings.Set("culture", "en-US");
             this.txtPurchase.Properties.MaskSettings.Set("mask", "c");
+            this.txtPurchase.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtPurchase.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPurchase.Size = new System.Drawing.Size(516, 32);
             this.txtPurchase.TabIndex = 37;
             // 
@@ -258,7 +261,7 @@ namespace TechnicService.Forms
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(599, 192);
+            this.label2.Location = new System.Drawing.Point(578, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 24);
             this.label2.TabIndex = 22;

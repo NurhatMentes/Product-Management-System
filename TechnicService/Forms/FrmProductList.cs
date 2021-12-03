@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors.Filtering.Controls;
 using DevExpress.XtraEditors.Repository;
+using TechnicService.Core.Service;
 
 namespace TechnicService.Forms
 {
@@ -20,22 +22,30 @@ namespace TechnicService.Forms
         }
 
         private TechnicServiceEntities _entities = new TechnicServiceEntities();
+        UsdService _usdService = new UsdService();
         public void ProductList()
         {
-            var values = from x in _entities.Products
-                select new
+            var sa = _entities.Products.Select(d => d.Purchase).ToList();
+            foreach (var index in sa)
+            {
+                var ass = index.ToString("##,###");
+            }
+            var a = _usdService.Usd();
+            
+            var values = _entities.Products.AsEnumerable().Select(x=>new
+               
                 {
                     x.Id,
                     Ürün = x.Name,
                     Marka = x.Brand,
                     Kategori = x.Category.Name,
-                    AlışFiyatı = x.Purchase,
-                    SatışFiyatı = x.SalesPrice,
+                    AlışFiyatı = x.Purchase.ToString("##,##"),
+                    SatışFiyatı = (x.SalesPrice * a).ToString("#,#"),
                     Stok = x.stock,
                     Barkod = x.BarcodeNo,
                     Cari = x.Customers.FirstName,
                     Durum = x.Status ? "Stokta var" : "Stokta yok"
-                };
+                });
             gridControl1.DataSource = values.ToList();
 
            
@@ -66,6 +76,7 @@ namespace TechnicService.Forms
             CountOfStock();
             CountOutOfStock();
             ProductList();
+          
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -116,7 +116,7 @@ namespace TechnicService
 
             System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(backupFolder);
             System.IO.FileInfo[] fis = di.GetFiles("*.bak");
-            if (fis.Length == 0 || (DateTime.Now - fis.Max(d => d.CreationTime)).TotalMinutes >= 5)
+            if (fis.Length == 0 || (DateTime.Now - fis.Max(d => d.CreationTime)).TotalDays >= 5)
             { 
                 Server dbServer = new Server(new ServerConnection(server));
                 Backup dbBackup = new Backup();
@@ -134,11 +134,11 @@ namespace TechnicService
         {
             try
             {
-                MessageBox.Show("Yedekleme Başarılı","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Yedekleme Başarılı","Veri Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exception.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
         }

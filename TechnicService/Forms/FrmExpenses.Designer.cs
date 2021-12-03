@@ -153,7 +153,6 @@ namespace TechnicService.Forms
             this.txtprice.Name = "txtprice";
             this.txtprice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtprice.Properties.Appearance.Options.UseFont = true;
-            this.txtprice.Properties.BeepOnError = false;
             this.txtprice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtprice.Properties.MaskSettings.Set("mask", "c");
             this.txtprice.Size = new System.Drawing.Size(116, 30);
@@ -166,7 +165,6 @@ namespace TechnicService.Forms
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtquantity.Properties.Appearance.Options.UseFont = true;
-            this.txtquantity.Properties.BeepOnError = false;
             this.txtquantity.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtquantity.Properties.MaskSettings.Set("mask", "d");
             this.txtquantity.Size = new System.Drawing.Size(116, 30);
@@ -211,7 +209,7 @@ namespace TechnicService.Forms
             this.barCodeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.barCodeControl1.Name = "barCodeControl1";
             this.barCodeControl1.Padding = new System.Windows.Forms.Padding(13, 2, 13, 0);
-            this.barCodeControl1.Size = new System.Drawing.Size(738, 53);
+            this.barCodeControl1.Size = new System.Drawing.Size(352, 53);
             ınterleaved2of5Generator1.WideNarrowRatio = 3F;
             this.barCodeControl1.Symbology = ınterleaved2of5Generator1;
             this.barCodeControl1.TabIndex = 15;
@@ -227,7 +225,6 @@ namespace TechnicService.Forms
             this.spinSale.Location = new System.Drawing.Point(1069, 450);
             this.spinSale.Margin = new System.Windows.Forms.Padding(4);
             this.spinSale.Name = "spinSale";
-            this.spinSale.Properties.BeepOnError = false;
             this.spinSale.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinSale.Properties.MaskSettings.Set("mask", "P");
