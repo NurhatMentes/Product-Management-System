@@ -114,7 +114,7 @@ namespace TechnicService.Forms
             this.btnAdd.Location = new System.Drawing.Point(1644, 329);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(341, 197);
+            this.btnAdd.Size = new System.Drawing.Size(271, 197);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Yeni Kayıt";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -133,7 +133,7 @@ namespace TechnicService.Forms
             this.btnUpdate.Location = new System.Drawing.Point(1644, 616);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(341, 197);
+            this.btnUpdate.Size = new System.Drawing.Size(271, 197);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Kayıt Güncelle";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -154,7 +154,7 @@ namespace TechnicService.Forms
             this.btnList.Location = new System.Drawing.Point(1644, 43);
             this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(341, 197);
+            this.btnList.Size = new System.Drawing.Size(271, 197);
             this.btnList.TabIndex = 3;
             this.btnList.Text = "Kayıtları Listele";
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
@@ -192,7 +192,6 @@ namespace TechnicService.Forms
             this.dtList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMalfunction});
             this.dtList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtList_MouseDoubleClick);
-
             // 
             // grdMalfunction
             // 
@@ -308,7 +307,7 @@ namespace TechnicService.Forms
             this.btnAddMalfunction.Appearance.Options.UseFont = true;
             this.btnAddMalfunction.ImageOptions.Image = global::TechnicService.Properties.Resources.apply_32x32;
             this.btnAddMalfunction.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAddMalfunction.Location = new System.Drawing.Point(422, 640);
+            this.btnAddMalfunction.Location = new System.Drawing.Point(422, 659);
             this.btnAddMalfunction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMalfunction.Name = "btnAddMalfunction";
             this.btnAddMalfunction.Size = new System.Drawing.Size(917, 53);
@@ -594,7 +593,7 @@ namespace TechnicService.Forms
             this.grpUpdate.Location = new System.Drawing.Point(18, 43);
             this.grpUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpUpdate.Name = "grpUpdate";
-            this.grpUpdate.Size = new System.Drawing.Size(1809, 695);
+            this.grpUpdate.Size = new System.Drawing.Size(1877, 695);
             this.grpUpdate.TabIndex = 8;
             this.grpUpdate.Text = "Kayıt Güncelle";
             // 
@@ -685,12 +684,12 @@ namespace TechnicService.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1998, 889);
+            this.ClientSize = new System.Drawing.Size(1924, 889);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.pnlList);
             this.Controls.Add(this.grpAdd);
+            this.Controls.Add(this.pnlList);
             this.Controls.Add(this.grpUpdate);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMalfunction";

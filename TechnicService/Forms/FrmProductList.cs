@@ -53,12 +53,12 @@ namespace TechnicService.Forms
 
         void CountOfPurchase()
         {
-            lblPurches.Text = _entities.Products.Sum(x => x.Purchase)+ " ₺";
+            lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString("##,##") + " ₺";
         }
 
         void CountOfExpenses()
         {
-            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice)+ " ₺";
+            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString("##,##") + " ₺";
         }
         void CountOfStock()
         {

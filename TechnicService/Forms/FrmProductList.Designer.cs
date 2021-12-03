@@ -84,7 +84,7 @@ namespace TechnicService.Forms
             // 
             this.lblPurches.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPurches.Appearance.Options.UseFont = true;
-            this.lblPurches.Location = new System.Drawing.Point(15, 83);
+            this.lblPurches.Location = new System.Drawing.Point(52, 83);
             this.lblPurches.Name = "lblPurches";
             this.lblPurches.Size = new System.Drawing.Size(44, 48);
             this.lblPurches.TabIndex = 80;
@@ -128,7 +128,7 @@ namespace TechnicService.Forms
             // 
             this.lblExpenses.Appearance.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExpenses.Appearance.Options.UseFont = true;
-            this.lblExpenses.Location = new System.Drawing.Point(15, 83);
+            this.lblExpenses.Location = new System.Drawing.Point(50, 83);
             this.lblExpenses.Name = "lblExpenses";
             this.lblExpenses.Size = new System.Drawing.Size(44, 48);
             this.lblExpenses.TabIndex = 80;
@@ -214,7 +214,7 @@ namespace TechnicService.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(2006, 778);
+            this.ClientSize = new System.Drawing.Size(1924, 778);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
