@@ -29,7 +29,7 @@ namespace TechnicService.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator ınterleaved2of5Generator1 = new DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator();
+            DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator ınterleaved2of5Generator2 = new DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExpenses));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@ namespace TechnicService.Forms
             this.spinSale = new DevExpress.XtraEditors.SpinEdit();
             this.btnSell = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.checkSale.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtquantity.Properties)).BeginInit();
@@ -209,9 +210,9 @@ namespace TechnicService.Forms
             this.barCodeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.barCodeControl1.Name = "barCodeControl1";
             this.barCodeControl1.Padding = new System.Windows.Forms.Padding(13, 2, 13, 0);
-            this.barCodeControl1.Size = new System.Drawing.Size(352, 53);
-            ınterleaved2of5Generator1.WideNarrowRatio = 3F;
-            this.barCodeControl1.Symbology = ınterleaved2of5Generator1;
+            this.barCodeControl1.Size = new System.Drawing.Size(459, 53);
+            ınterleaved2of5Generator2.WideNarrowRatio = 3F;
+            this.barCodeControl1.Symbology = ınterleaved2of5Generator2;
             this.barCodeControl1.TabIndex = 15;
             this.barCodeControl1.Visible = false;
             // 
@@ -268,12 +269,23 @@ namespace TechnicService.Forms
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(1469, 142);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "İptal Et";
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(190)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1789, 778);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSell);
             this.Controls.Add(this.spinSale);
@@ -329,5 +341,6 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.SpinEdit spinSale;
         private DevExpress.XtraEditors.SimpleButton btnSell;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
@@ -108,10 +109,18 @@ namespace TechnicService
 
 
             //---------------Database backup---------------
-            string backupPath = @"E:\Yedekler/TechicService_" + DateTime.Today.Day + "." + DateTime.Today.Month + "." + DateTime.Today.Year + ".bak";
+
+           var drives = DriveInfo.GetDrives();
+
+
+
+            string backupPath = @"C:\Yedekler/TechicService_" + DateTime.Today.Day + "." + DateTime.Today.Month + "." + DateTime.Today.Year + ".bak"; 
+
+                
+           
             string server = @"(localdb)\MSSQLLocalDB";
 
-            string backupFolder ="E:\\Yedekler";
+            string backupFolder ="C:\\Yedekler";
             System.IO.Directory.CreateDirectory(backupFolder);
 
             System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(backupFolder);

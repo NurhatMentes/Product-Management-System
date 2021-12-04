@@ -66,7 +66,7 @@ namespace TechnicService.Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(83, 187);
+            this.label1.Location = new System.Drawing.Point(75, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 24);
             this.label1.TabIndex = 49;
@@ -77,7 +77,7 @@ namespace TechnicService.Forms
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(86, 396);
+            this.label7.Location = new System.Drawing.Point(78, 396);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 46;
@@ -88,7 +88,7 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(83, 340);
+            this.label8.Location = new System.Drawing.Point(75, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 24);
             this.label8.TabIndex = 45;
@@ -99,7 +99,7 @@ namespace TechnicService.Forms
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(83, 286);
+            this.label9.Location = new System.Drawing.Point(75, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 24);
             this.label9.TabIndex = 43;
@@ -110,7 +110,7 @@ namespace TechnicService.Forms
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(83, 235);
+            this.label10.Location = new System.Drawing.Point(75, 235);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 24);
             this.label10.TabIndex = 42;
@@ -121,7 +121,7 @@ namespace TechnicService.Forms
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(83, 138);
+            this.label6.Location = new System.Drawing.Point(75, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 41;
@@ -265,7 +265,7 @@ namespace TechnicService.Forms
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(83, 87);
+            this.label3.Location = new System.Drawing.Point(75, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 58;
@@ -291,7 +291,7 @@ namespace TechnicService.Forms
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(83, 36);
+            this.label2.Location = new System.Drawing.Point(75, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 24);
             this.label2.TabIndex = 56;

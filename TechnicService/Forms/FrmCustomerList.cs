@@ -44,6 +44,10 @@ namespace TechnicService.Forms
         private void FrmCustomerList_Load(object sender, EventArgs e)
         {
             CustomerList();
+            if (_entities.Customers.Count()==0)
+            {
+                btnDelete.Enabled = false;
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -61,7 +65,7 @@ namespace TechnicService.Forms
                 _entities.SaveChanges();
                 CustomerList();
 
-                MessageBox.Show(customer.FirstName + "" + "İsimli cari kayıt başarıyla silindi", "Bilgi",
+                MessageBox.Show(customer.FirstName + " " + "İsimli cari kayıt başarıyla silindi", "Bilgi",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }

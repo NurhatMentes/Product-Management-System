@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicService", "TechnicService\TechnicService.csproj", "{2FA869F9-D136-4778-8377-6E0DD03FC432}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MBS Teknik Servis v2", "MBS Teknik Servis v2\MBS Teknik Servis v2.vdproj", "{D1799E15-2CA4-48B7-B0B2-242A7C7770CA}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MBS UYS", "MBS UYS\MBS UYS.vdproj", "{2B27FBAF-7EA4-4158-874E-F04DD12F3A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,12 +13,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA869F9-D136-4778-8377-6E0DD03FC432}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1799E15-2CA4-48B7-B0B2-242A7C7770CA}.Debug|Any CPU.ActiveCfg = Debug
-		{D1799E15-2CA4-48B7-B0B2-242A7C7770CA}.Release|Any CPU.ActiveCfg = Release
+		{2B27FBAF-7EA4-4158-874E-F04DD12F3A22}.Debug|Any CPU.ActiveCfg = Release
+		{2B27FBAF-7EA4-4158-874E-F04DD12F3A22}.Debug|Any CPU.Build.0 = Release
+		{2B27FBAF-7EA4-4158-874E-F04DD12F3A22}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

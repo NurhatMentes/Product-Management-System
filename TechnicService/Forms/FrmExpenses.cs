@@ -46,10 +46,18 @@ namespace TechnicService.Forms
                     _expenses.Price = productPrice - (productPrice * sale);
                 }
 
+                barCodeControl1.Visible = false;
+                txtBarcode.Visible = true;
+                txtBarcode.Text = "";
+                txtquantity.Text = "";
+                txtprice.Text="";
+                txtBrand.Text = "";
+                txtBarcode.Text = "";
+                txtProductName.Text = "";
+
                 _entities.Expenses.Add(_expenses);
                 _entities.SaveChanges();
                 MessageBox.Show("Ürün satışı gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
             }
             else
             {
@@ -79,6 +87,7 @@ namespace TechnicService.Forms
                     txtBarcode.Visible = false;
                     barCodeControl1.Text = txtBarcode.Text.ToUpper();
                     barCodeControl1.Visible = true;
+                    btnCancel.Visible = true;
                 }
 
             }
@@ -87,5 +96,18 @@ namespace TechnicService.Forms
             {
                 btnSell.Enabled = false;
             }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            barCodeControl1.Visible = false;
+            txtBarcode.Visible = true;
+            txtBarcode.Text = "";
+            txtquantity.Text = "";
+            txtprice.Text = "";
+            txtBrand.Text = "";
+            txtBarcode.Text = "";
+            txtProductName.Text = "";
+            btnCancel.Visible = false;
         }
+    }
     }

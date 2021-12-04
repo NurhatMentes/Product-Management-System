@@ -25,23 +25,26 @@ namespace TechnicService.Forms
             DateTime end = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 29);
 
 
-            var price = _entities.Expenses.Where(x => x.Date >= start && x.Date <= end).Select(x => x.Price);
-            var productName = _entities.Expenses.Where(x => x.Date >= start && x.Date <= end).Select(x => x.Products.Name);
-            var date = _entities.Expenses.Where(x => x.Date >= start).Select(x => x.Date);
-            var sumPrice = _entities.Expenses.Sum(x => x.Price);
-
-
-            var priceList = price.ToList();
-            var productNameList = productName.ToList();
-            var dateList = date.ToList();
-
-            for (int i = 0; i < price.Count(); i++)
+            if (_entities.Expenses.Count()>0)
             {
-                chartControl1.Series["Series 2"].Points.AddPoint(productNameList[i] + " " + dateList[i], Convert.ToInt32(priceList[i]));
-                // chartControl1.Series["Series 2"].Points.AddPoint(date[i].ToString(), Convert.ToInt32(price[i]));
-            }
+                var price = _entities.Expenses.Where(x => x.Date >= start && x.Date <= end).Select(x => x.Price);
+                var productName = _entities.Expenses.Where(x => x.Date >= start && x.Date <= end).Select(x => x.Products.Name);
+                var date = _entities.Expenses.Where(x => x.Date >= start).Select(x => x.Date);
+                var sumPrice = _entities.Expenses.Sum(x => x.Price);
 
-            lblSumPrice.Text = "Satılan ürünlerin toplam fiyatı (tüm zamanlar): " + sumPrice + "₺";
+
+                var priceList = price.ToList();
+                var productNameList = productName.ToList();
+                var dateList = date.ToList();
+
+                for (int i = 0; i < price.Count(); i++)
+                {
+                    chartControl1.Series["Series 2"].Points.AddPoint(productNameList[i] + " " + dateList[i], Convert.ToInt32(priceList[i]));
+                    // chartControl1.Series["Series 2"].Points.AddPoint(date[i].ToString(), Convert.ToInt32(price[i]));
+                }
+
+                lblSumPrice.Text = "Satılan ürünlerin toplam fiyatı (tüm zamanlar): " + sumPrice + "₺";
+            }
         }
 
         private void FrmStatistickMounthSell_Load(object sender, EventArgs e)

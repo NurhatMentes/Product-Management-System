@@ -53,24 +53,47 @@ namespace TechnicService.Forms
 
         void CountOfPurchase()
         {
-            lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString("##,##") + " ₺";
+            if (_entities.Products.Count()>0)
+            {
+                lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString("##,##") + " ₺";
+            }
         }
 
         void CountOfExpenses()
         {
-            lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString("##,##") + " ₺";
+
+            if (_entities.Products.Count() > 0)
+            {
+                lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString("##,##") + " ₺";
+                
+            }
         }
         void CountOfStock()
         {
-            lblStockCount.Text = _entities.Products.Sum(x => x.stock)+ " Adet";
+
+            if (_entities.Products.Count() > 0)
+            {
+                lblStockCount.Text = _entities.Products.Sum(x => x.stock)+ " Adet";
+            }
+  
         }
         void CountOutOfStock()
         {
-            lblOutOfStock.Text = _entities.Products.Count(x=>x.stock<=0) + " Adet";
+
+            if (_entities.Products.Count() > 0)
+            {
+                lblOutOfStock.Text = _entities.Products.Count(x=>x.stock<=0) + " Adet";
+            }
+
+            
         }
 
         private void FrmProductList_Load(object sender, EventArgs e)
         {
+            if (_entities.Products.Count()==0)
+            {
+                btnDelete.Enabled = false;
+            }
             CountOfPurchase();
             CountOfExpenses();
             CountOfStock();
@@ -93,7 +116,7 @@ namespace TechnicService.Forms
                 _entities.SaveChanges();
                 ProductList();
 
-                MessageBox.Show(product.Name + "" + "Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
+                MessageBox.Show(product.Name + " Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
         }
