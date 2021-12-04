@@ -319,6 +319,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>TechnicServiceDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Core\Service\DiskBackup.cs" />
     <Compile Include="Core\Service\UsdApi.cs" />
     <Compile Include="Customers.cs">
       <DependentUpon>TechnicServiceDb.tt</DependentUpon>

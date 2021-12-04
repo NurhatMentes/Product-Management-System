@@ -13,6 +13,7 @@ using DevExpress.ReportServer.ServiceModel.ConnectionProviders;
 using DevExpress.XtraBars;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
+using TechnicService.Core.Service;
 using TechnicService.Forms;
 
 
@@ -102,7 +103,7 @@ namespace TechnicService
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            DiskBackup backup = new DiskBackup();
             frmProductList = new FrmProductList();
             frmProductList.MdiParent = this;
             frmProductList.Show();
@@ -110,47 +111,21 @@ namespace TechnicService
 
             //---------------Database backup---------------
 
-           var drives = DriveInfo.GetDrives();
+            var drive = System.IO.Directory.Exists(@"C:\"); 
+           var drive2 = System.IO.Directory.Exists(@"D:\");
 
-
-
-            string backupPath = @"C:\Yedekler/TechicService_" + DateTime.Today.Day + "." + DateTime.Today.Month + "." + DateTime.Today.Year + ".bak"; 
-
-                
-           
-            string server = @"(localdb)\MSSQLLocalDB";
-
-            string backupFolder ="C:\\Yedekler";
-            System.IO.Directory.CreateDirectory(backupFolder);
-
-            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(backupFolder);
-            System.IO.FileInfo[] fis = di.GetFiles("*.bak");
-            if (fis.Length == 0 || (DateTime.Now - fis.Max(d => d.CreationTime)).TotalDays >= 5)
-            { 
-                Server dbServer = new Server(new ServerConnection(server));
-                Backup dbBackup = new Backup();
-                dbBackup.Action = BackupActionType.Database;
-                dbBackup.Database = "TechnicService";
-                dbBackup.Devices.AddDevice(backupPath, DeviceType.File);
-                dbBackup.Initialize = false;
-                dbBackup.Complete += DbBackupOnComplete;
-                dbBackup.SqlBackup(dbServer);
+           if (drive)
+            {
+                backup.BackupByDisk("C");
+            }
+            if (drive2)
+            {
+                backup.BackupByDisk("D");
             }
 
         }
 
-        private void DbBackupOnComplete(object sender, ServerMessageEventArgs e)
-        {
-            try
-            {
-                MessageBox.Show("Yedekleme Başarılı","Veri Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
-        }
+       
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
