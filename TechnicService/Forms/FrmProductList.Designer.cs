@@ -240,6 +240,7 @@ namespace TechnicService.Forms
             this.Name = "FrmProductList";
             this.Text = "Ürünler";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmProductList_FormClosed);
             this.Load += new System.EventHandler(this.FrmProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

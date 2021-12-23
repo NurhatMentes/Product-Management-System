@@ -31,9 +31,9 @@ namespace TechnicService
         FrmStatistickAnnualSalesAndAverage annualStatistic;
         FrmCustomerAdd frmCustomer;
         FrmCustomerList frmCustomerList;
-        FrmCustomerUpdate frmCustomerUpdate;
-
-
+        FrmCustomerUpdate frmCustomerUpdate; 
+        Login _login = new Login();
+        private int timer = 0;
 
 
 
@@ -107,7 +107,7 @@ namespace TechnicService
             frmProductList = new FrmProductList();
             frmProductList.MdiParent = this;
             frmProductList.Show();
-
+            
 
             //---------------Database backup---------------
 
@@ -189,6 +189,7 @@ namespace TechnicService
             frmCustomerUpdate.MdiParent = this;
             frmCustomerUpdate.Show();
         }
+
     }
 
     

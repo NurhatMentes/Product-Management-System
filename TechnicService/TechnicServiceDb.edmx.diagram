@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="Db.Products" Width="1.5" PointX="3.875" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.Revenues" Width="1.5" PointX="9.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Db.sysdiagrams" Width="1.5" PointX="12.125" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Db.Users" Width="1.5" PointX="8" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db.Users" Width="1.5" PointX="6.125" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="Db.FK_Products_Category" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Db.MalfunctionUpdate" Width="1.5" PointX="8.125" PointY="1.75" />
         <AssociationConnector Association="Db.FK_Expenses_Products" />

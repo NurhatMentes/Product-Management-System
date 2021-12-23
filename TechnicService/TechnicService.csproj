@@ -154,6 +154,10 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Assessment.1.0.305\lib\net462\Microsoft.SqlServer.Assessment.dll</HintPath>
     </Reference>
@@ -380,11 +384,23 @@
     <Compile Include="Forms\FrmExpenses.Designer.cs">
       <DependentUpon>FrmExpenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmForgetPassword.Designer.cs">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMalfunction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMalfunction.Designer.cs">
       <DependentUpon>FrmMalfunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPasswordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPasswordReset.Designer.cs">
+      <DependentUpon>FrmPasswordReset.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmProductAdd.cs">
       <SubType>Form</SubType>
@@ -513,8 +529,14 @@
     <EmbeddedResource Include="Forms\FrmExpenses.resx">
       <DependentUpon>FrmExpenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmForgetPassword.resx">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMalfunction.resx">
       <DependentUpon>FrmMalfunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPasswordReset.resx">
+      <DependentUpon>FrmPasswordReset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductAdd.resx">
       <DependentUpon>FrmProductAdd.cs</DependentUpon>
