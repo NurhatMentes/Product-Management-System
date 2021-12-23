@@ -26,12 +26,14 @@ namespace TechnicService
 
         public void SendMail()
         {
+            TechnicServiceEntities _entities = new TechnicServiceEntities();
+            var mail = _entities.Users.Where(x=>x.Id==1).Select(x => x.Mail).FirstOrDefault();
             MailMessage ePosta = new MailMessage();
             ePosta.From = new MailAddress("starworkdestek@hotmail.com", "StarWork-IT");
             ePosta.Subject = "Güvenlik Kodu";
             try
             {
-                ePosta.To.Add("info@mbselektronik.com");
+                ePosta.To.Add(mail);
                 ePosta.Body = "Güvenliğiniz için kodu başkası ile paylaşmayınız.\n \n" + " Güvenlik Kodu: "+code;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Credentials = new System.Net.NetworkCredential("starworkdestek@hotmail.com", "kvasirstarwork2021");
