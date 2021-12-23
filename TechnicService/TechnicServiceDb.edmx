@@ -44,7 +44,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SerialNo" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Problem" Type="ntext" Nullable="false" />
           <Property Name="Description" Type="ntext" />
@@ -59,7 +59,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SerialNo" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="50" />
           <Property Name="Process" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Products">
@@ -71,8 +71,8 @@
           <Property Name="CustomerId" Type="int" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Purchase" Type="smallmoney" Nullable="false" />
-          <Property Name="SalesPrice" Type="smallmoney" Nullable="false" />
+          <Property Name="Purchase" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SalesPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="stock" Type="int" Nullable="false" />
           <Property Name="BarcodeNo" Type="nvarchar" MaxLength="20" />
           <Property Name="Status" Type="bit" Nullable="false" />
@@ -118,18 +118,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Products_Category">
-          <End Role="Category" Type="Self.Category" Multiplicity="1" />
-          <End Role="Products" Type="Self.Products" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Category">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="CategoryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Products_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -155,10 +143,6 @@
           <AssociationSet Name="FK_Expenses_Products" Association="Self.FK_Expenses_Products">
             <End Role="Products" EntitySet="Products" />
             <End Role="Expenses" EntitySet="Expenses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Products_Category" Association="Self.FK_Products_Category">
-            <End Role="Category" EntitySet="Category" />
-            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="FK_Products_Customers" Association="Self.FK_Products_Customers">
             <End Role="Customers" EntitySet="Customers" />
@@ -219,7 +203,7 @@
           <Property Name="CustomerFirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomerLastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomerPhone" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="true" />
-          <Property Name="SerialNo" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -229,8 +213,8 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Purchase" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
-          <Property Name="SalesPrice" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Purchase" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SalesPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Products_Category" FromRole="Products" ToRole="Category" />
@@ -308,7 +292,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Process" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Expenses_Products">

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TechnicService
 {
-    public partial class Login : Form
+    public partial class Login : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         public Login()
         {

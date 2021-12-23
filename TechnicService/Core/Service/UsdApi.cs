@@ -15,7 +15,7 @@ namespace TechnicService.Core.Service
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(exchangeRate);
             
-            string usdType = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod ='USD']/BanknoteSelling").InnerXml;
+            string usdType = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod ='USD']/BanknoteSelling").InnerXml.Replace(".",",");
 
             decimal usd =Convert.ToDecimal(usdType.Substring(0, 5));
             return Convert.ToDecimal(usd);

@@ -88,7 +88,7 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(75, 340);
+            this.label8.Location = new System.Drawing.Point(73, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 24);
             this.label8.TabIndex = 45;

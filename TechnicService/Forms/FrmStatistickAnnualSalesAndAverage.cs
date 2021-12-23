@@ -30,10 +30,12 @@ namespace TechnicService.Forms
             DateTime end = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 29);
             DateTime lastYear = new DateTime(DateTime.Now.AddYears(-1).Year, DateTime.Today.Month, 29);
             DateTime year = new DateTime(DateTime.Now.Year, DateTime.Today.Month, DateTime.Today.Day);
+        
 
 
             if (_entities.Expenses.Count()>0)
             {
+              
                 var thisYearPrice = _entities.Expenses.Where(x => x.Date >= lastYear).Sum(x => x.Price);
                 var lastYearPrice = _entities.Expenses.Where(x => x.Date <= lastYear).Sum(x => x.Price);
                 var average1 = _entities.Expenses.Where(x => x.Date >= lastYear).Average(x => x.Price);
@@ -42,8 +44,8 @@ namespace TechnicService.Forms
 
                 Series series1 = new Series(DateTime.Now.AddYears(-1).Year.ToString(), ViewType.Bar);
                 Series series2 = new Series(DateTime.Now.Year.ToString(), ViewType.Bar);
-                Series series3 = new Series(DateTime.Now.Year + " ortalaması", ViewType.Spline);
-                Series series4 = new Series(DateTime.Now.AddYears(-1).Year + " ortalaması", ViewType.Spline);
+                Series series3 = new Series(DateTime.Now.AddYears(-1).Year + " ortalaması", ViewType.Spline);
+                Series series4 = new Series(DateTime.Now.Year + " ortalaması", ViewType.Spline);
 
 
                 for (int i = 2020; i < 2022; i++)
@@ -82,6 +84,10 @@ namespace TechnicService.Forms
                 chartControl1.Titles.Add(chartTitle1);
 
                 this.Controls.Add(chartControl1);
+            }
+            else
+            {
+                MessageBox.Show("Yeterli veri yok", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

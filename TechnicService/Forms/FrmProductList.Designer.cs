@@ -44,6 +44,7 @@ namespace TechnicService.Forms
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lblStockCount = new DevExpress.XtraEditors.LabelControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.lblUsd = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -208,6 +209,19 @@ namespace TechnicService.Forms
             this.btnDelete.Text = "Kayıt Sil";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // lblUsd
+            // 
+            this.lblUsd.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblUsd.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUsd.Appearance.Options.UseBackColor = true;
+            this.lblUsd.Appearance.Options.UseFont = true;
+            this.lblUsd.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblUsd.Location = new System.Drawing.Point(1370, 42);
+            this.lblUsd.Name = "lblUsd";
+            this.lblUsd.Size = new System.Drawing.Size(134, 30);
+            this.lblUsd.TabIndex = 86;
+            this.lblUsd.Text = "labelControl4";
+            // 
             // FrmProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,6 +229,7 @@ namespace TechnicService.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 778);
+            this.Controls.Add(this.lblUsd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -237,6 +252,7 @@ namespace TechnicService.Forms
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -256,5 +272,6 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.LabelControl lblStockCount;
         public DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.LabelControl lblUsd;
     }
 }

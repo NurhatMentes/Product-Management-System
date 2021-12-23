@@ -22,7 +22,7 @@ namespace TechnicService
     public partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         FrmProductList frmProductList;
-        private Forms.FrmMalfunction frmMalfunction;
+        FrmMalfunction frmMalfunction;
         FrmProductUpdate update;
         FrmProductAdd add;
         FrmExpenses expenses;

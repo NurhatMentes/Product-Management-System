@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,19 +30,21 @@ namespace TechnicService.Forms
             var sa = _entities.Products.Select(d => d.Purchase).ToList();
             foreach (var index in sa)
             {
-                var ass = index.ToString("##,###");
+                var ass = index.ToString("C");
+                
             }
-            var a = _usdService.Usd();
+            var usd = _usdService.Usd();
+            
             
             var values = _entities.Products.AsEnumerable().Select(x=>new
                
                 {
                     x.Id,
-                    Ürün = x.Name,
+                    Ürün = x.Name.ToString(),
                     Marka = x.Brand,
                     Kategori = x.Category.Name,
-                    AlışFiyatı = x.Purchase.ToString("##,##"),
-                    SatışFiyatı = (x.SalesPrice * a).ToString("#,#"),
+                    AlışFiyatı = x.Purchase.ToString("C",new CultureInfo("en-Us")),
+                    SatışFiyatı = (x.SalesPrice * usd).ToString("C"),
                     Stok = x.stock,
                     Barkod = x.BarcodeNo,
                     Cari = x.Customers.FirstName,
@@ -55,7 +59,7 @@ namespace TechnicService.Forms
         {
             if (_entities.Products.Count()>0)
             {
-                lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString("##,##") + " ₺";
+                lblPurches.Text = _entities.Products.Sum(x => x.Purchase).ToString("##,##") + "$";
             }
         }
 
@@ -64,7 +68,7 @@ namespace TechnicService.Forms
 
             if (_entities.Products.Count() > 0)
             {
-                lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString("##,##") + " ₺";
+                lblExpenses.Text = _entities.Products.Sum(x => x.SalesPrice).ToString("##,##") + "$";
                 
             }
         }
@@ -99,7 +103,7 @@ namespace TechnicService.Forms
             CountOfStock();
             CountOutOfStock();
             ProductList();
-          
+            lblUsd.Text = "USD/TL: " + _usdService.Usd().ToString("C");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -107,18 +111,27 @@ namespace TechnicService.Forms
             DialogResult result;
             result = MessageBox.Show("Ürünü silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                var product = _entities.Products.Find(id);
-                _entities.Products.Remove(product);
-                _entities.SaveChanges();
-                ProductList();
 
-                MessageBox.Show(product.Name + " Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
+                    var product = _entities.Products.Find(id);
+                    _entities.Products.Remove(product);
+                    _entities.SaveChanges();
+                    ProductList();
+
+                    MessageBox.Show(product.Name + " Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+            }
+            catch (DbUpdateException exception)
+            {
+                MessageBox.Show("Veri güvenliği sebebi ile bu ürün silinemez.", "Uyarı", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
         }
+
     }
 }

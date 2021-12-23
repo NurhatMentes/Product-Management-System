@@ -41,7 +41,6 @@ namespace TechnicService.Forms
             this.grpAdd = new DevExpress.XtraEditors.GroupControl();
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSeriNo = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnAddMalfunction = new DevExpress.XtraEditors.SimpleButton();
@@ -76,6 +75,7 @@ namespace TechnicService.Forms
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbxSerialNo = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtSeriNo = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlList)).BeginInit();
             this.pnlList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtList)).BeginInit();
@@ -84,7 +84,6 @@ namespace TechnicService.Forms
             this.grpAdd.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
@@ -96,6 +95,7 @@ namespace TechnicService.Forms
             this.grpUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -262,18 +262,6 @@ namespace TechnicService.Forms
             this.panel1.Size = new System.Drawing.Size(1624, 734);
             this.panel1.TabIndex = 14;
             // 
-            // txtSeriNo
-            // 
-            this.txtSeriNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSeriNo.Location = new System.Drawing.Point(252, 112);
-            this.txtSeriNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSeriNo.Name = "txtSeriNo";
-            this.txtSeriNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSeriNo.Properties.Appearance.Options.UseFont = true;
-            this.txtSeriNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtSeriNo.Size = new System.Drawing.Size(516, 32);
-            this.txtSeriNo.TabIndex = 23;
-            // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -325,11 +313,11 @@ namespace TechnicService.Forms
             this.groupBox1.Controls.Add(this.txtLastName);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Location = new System.Drawing.Point(906, 167);
+            this.groupBox1.Location = new System.Drawing.Point(963, 167);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(659, 204);
+            this.groupBox1.Size = new System.Drawing.Size(602, 204);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri Bilgileri";
@@ -339,7 +327,7 @@ namespace TechnicService.Forms
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(17, 126);
+            this.label13.Location = new System.Drawing.Point(-11, 126);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 24);
             this.label13.TabIndex = 25;
@@ -348,7 +336,7 @@ namespace TechnicService.Forms
             // txtPhone
             // 
             this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPhone.Location = new System.Drawing.Point(121, 122);
+            this.txtPhone.Location = new System.Drawing.Point(93, 122);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -364,7 +352,7 @@ namespace TechnicService.Forms
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(17, 88);
+            this.label12.Location = new System.Drawing.Point(-11, 88);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 24);
             this.label12.TabIndex = 23;
@@ -373,7 +361,7 @@ namespace TechnicService.Forms
             // txtLastName
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(121, 85);
+            this.txtLastName.Location = new System.Drawing.Point(93, 85);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -387,7 +375,7 @@ namespace TechnicService.Forms
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(17, 50);
+            this.label11.Location = new System.Drawing.Point(-11, 50);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 24);
             this.label11.TabIndex = 21;
@@ -396,7 +384,7 @@ namespace TechnicService.Forms
             // txtFirstName
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(121, 47);
+            this.txtFirstName.Location = new System.Drawing.Point(93, 47);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -678,6 +666,18 @@ namespace TechnicService.Forms
             this.cbxSerialNo.Size = new System.Drawing.Size(235, 30);
             this.cbxSerialNo.TabIndex = 0;
             // 
+            // txtSeriNo
+            // 
+            this.txtSeriNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSeriNo.Location = new System.Drawing.Point(252, 112);
+            this.txtSeriNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSeriNo.Name = "txtSeriNo";
+            this.txtSeriNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSeriNo.Properties.Appearance.Options.UseFont = true;
+            this.txtSeriNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtSeriNo.Size = new System.Drawing.Size(516, 32);
+            this.txtSeriNo.TabIndex = 24;
+            // 
             // FrmMalfunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -706,7 +706,6 @@ namespace TechnicService.Forms
             this.pnlAdd.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -720,6 +719,7 @@ namespace TechnicService.Forms
             this.grpUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,7 +769,7 @@ namespace TechnicService.Forms
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnUptated;
         private DevExpress.XtraEditors.CheckEdit check;
-        private DevExpress.XtraEditors.TextEdit txtSeriNo;
         private System.Windows.Forms.Label label14;
+        private DevExpress.XtraEditors.TextEdit txtSeriNo;
     }
 }

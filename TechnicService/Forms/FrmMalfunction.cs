@@ -99,8 +99,8 @@ namespace TechnicService.Forms
                     _malfunctions.CustomerFirstName = char.ToUpper(txtFirstName.Text[0]).ToString() + txtFirstName.Text.Substring(1);
                     _malfunctions.CustomerLastName = char.ToUpper(txtLastName.Text[0]).ToString() + txtLastName.Text.Substring(1);
                     _malfunctions.CustomerPhone = char.ToUpper(txtPhone.Text[0]).ToString() + txtPhone.Text.Substring(1);
-                    _malfunctions.SerialNo = txtSeriNo.ToString();
-                    _malfunctionUpdate.SerialNo = txtSeriNo.ToString();
+                    _malfunctions.SerialNo = txtSeriNo.Text;
+                    _malfunctionUpdate.SerialNo = txtSeriNo.Text;
                     _entities.MalfunctionUpdate.Add(_malfunctionUpdate);
                     _entities.Malfunctions.Add(_malfunctions);
                     try
