@@ -41,6 +41,7 @@ namespace TechnicService.Forms
             this.grpAdd = new DevExpress.XtraEditors.GroupControl();
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSeriNo = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnAddMalfunction = new DevExpress.XtraEditors.SimpleButton();
@@ -75,7 +76,6 @@ namespace TechnicService.Forms
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbxSerialNo = new DevExpress.XtraEditors.LookUpEdit();
-            this.txtSeriNo = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlList)).BeginInit();
             this.pnlList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtList)).BeginInit();
@@ -84,6 +84,7 @@ namespace TechnicService.Forms
             this.grpAdd.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
@@ -95,7 +96,6 @@ namespace TechnicService.Forms
             this.grpUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -261,6 +261,18 @@ namespace TechnicService.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1624, 734);
             this.panel1.TabIndex = 14;
+            // 
+            // txtSeriNo
+            // 
+            this.txtSeriNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSeriNo.Location = new System.Drawing.Point(252, 112);
+            this.txtSeriNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSeriNo.Name = "txtSeriNo";
+            this.txtSeriNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSeriNo.Properties.Appearance.Options.UseFont = true;
+            this.txtSeriNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtSeriNo.Size = new System.Drawing.Size(516, 32);
+            this.txtSeriNo.TabIndex = 24;
             // 
             // label14
             // 
@@ -581,7 +593,7 @@ namespace TechnicService.Forms
             this.grpUpdate.Location = new System.Drawing.Point(18, 43);
             this.grpUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpUpdate.Name = "grpUpdate";
-            this.grpUpdate.Size = new System.Drawing.Size(1877, 695);
+            this.grpUpdate.Size = new System.Drawing.Size(1882, 695);
             this.grpUpdate.TabIndex = 8;
             this.grpUpdate.Text = "Kayıt Güncelle";
             // 
@@ -666,18 +678,6 @@ namespace TechnicService.Forms
             this.cbxSerialNo.Size = new System.Drawing.Size(235, 30);
             this.cbxSerialNo.TabIndex = 0;
             // 
-            // txtSeriNo
-            // 
-            this.txtSeriNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSeriNo.Location = new System.Drawing.Point(252, 112);
-            this.txtSeriNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSeriNo.Name = "txtSeriNo";
-            this.txtSeriNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSeriNo.Properties.Appearance.Options.UseFont = true;
-            this.txtSeriNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtSeriNo.Size = new System.Drawing.Size(516, 32);
-            this.txtSeriNo.TabIndex = 24;
-            // 
             // FrmMalfunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -706,6 +706,7 @@ namespace TechnicService.Forms
             this.pnlAdd.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -719,7 +720,6 @@ namespace TechnicService.Forms
             this.grpUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.check.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSerialNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeriNo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

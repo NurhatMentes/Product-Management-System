@@ -85,7 +85,6 @@ namespace TechnicService
         {
             if (checkEdit1.Checked)
             {
-                //karakteri göster.
                 txtPassword.Properties.PasswordChar = '\0';
             }
       

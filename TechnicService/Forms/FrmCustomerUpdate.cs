@@ -89,7 +89,8 @@ namespace TechnicService.Forms
             GetCustomer();
         }
 
-        private void btnAddCustomer_Click(object sender, EventArgs e)
+
+        private void btnUpdateCustomer_Click_1(object sender, EventArgs e)
         {
             DialogResult dialogResult;
 
@@ -97,7 +98,7 @@ namespace TechnicService.Forms
             {
                 var message = MessageBox.Show("Güncellemek istediğinize emin misini?", "Soru", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                if (message==DialogResult.Yes)
+                if (message == DialogResult.Yes)
                 {
                     int id = Int32.Parse(cbxCustomer.EditValue.ToString());
                     var customer = _entities.Customers.Find(id);

@@ -152,11 +152,17 @@ namespace TechnicService
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-            annualStatistic = new FrmStatistickAnnualSalesAndAverage();
-            annualStatistic.MdiParent = this;
-            annualStatistic.Show();
-
+            if (DateTime.Now.Year>=2023)
+            {
+                annualStatistic = new FrmStatistickAnnualSalesAndAverage();
+                annualStatistic.MdiParent = this;
+                annualStatistic.Show();
+            }
+            else
+            {
+                MessageBox.Show("İstatistiğin gösterilmesi için yeterli veri bulunamadı.", "Uyarı",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 

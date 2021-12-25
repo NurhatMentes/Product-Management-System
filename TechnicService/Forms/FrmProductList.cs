@@ -109,33 +109,61 @@ namespace TechnicService.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Ürünü silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-            try
+            if ( gridView1.RowCount>0)
             {
-
-                if (result == DialogResult.Yes)
+                result = MessageBox.Show("Ürünü silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                try
                 {
-                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                    var product = _entities.Products.Find(id);
-                    _entities.Products.Remove(product);
-                    _entities.SaveChanges();
-                    ProductList();
 
-                    MessageBox.Show(product.Name + " Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
+                        var product = _entities.Products.Find(id);
+                        _entities.Products.Remove(product);
+                        _entities.SaveChanges();
+                        ProductList();
+
+                        MessageBox.Show(product.Name + " Ürünü başarıyla silindi", "Bilgi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                }
+                catch (DbUpdateException exception)
+                {
+                    MessageBox.Show("Veri güvenliği sebebi ile bu ürün silinemez.", "Uyarı", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                 }
             }
-            catch (DbUpdateException exception)
+            else
             {
-                MessageBox.Show("Veri güvenliği sebebi ile bu ürün silinemez.", "Uyarı", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("Silinecek ürün bulunamadı.", "Hata", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
         private void FrmProductList_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRef_Click(object sender, EventArgs e)
+        {
+            CountOfPurchase();
+            CountOfExpenses();
+            CountOfStock();
+            CountOutOfStock();
+            ProductList();
+            if (gridView1.RowCount == 0)
+            {
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                if (btnDelete.Enabled == false && gridView1.RowCount > 0)
+                {
+                    btnDelete.Enabled = true;
+                }
+            }
         }
     }
 }

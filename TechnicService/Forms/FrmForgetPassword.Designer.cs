@@ -49,12 +49,12 @@ namespace TechnicService.Forms
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(716, 489);
+            this.pictureEdit1.Size = new System.Drawing.Size(690, 489);
             this.pictureEdit1.TabIndex = 0;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(326, 176);
+            this.txtCode.Location = new System.Drawing.Point(305, 176);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCode.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -68,7 +68,7 @@ namespace TechnicService.Forms
             this.lblTimer.AutoSize = true;
             this.lblTimer.BackColor = System.Drawing.Color.Red;
             this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTimer.Location = new System.Drawing.Point(358, 230);
+            this.lblTimer.Location = new System.Drawing.Point(330, 227);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(103, 29);
             this.lblTimer.TabIndex = 4;
@@ -82,7 +82,7 @@ namespace TechnicService.Forms
             // 
             this.btnSend.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSend.Appearance.Options.UseFont = true;
-            this.btnSend.Location = new System.Drawing.Point(311, 296);
+            this.btnSend.Location = new System.Drawing.Point(281, 290);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(191, 36);
             this.btnSend.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace TechnicService.Forms
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(155, 179);
+            this.labelControl1.Location = new System.Drawing.Point(118, 179);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(144, 28);
             this.labelControl1.TabIndex = 6;
@@ -108,16 +108,18 @@ namespace TechnicService.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(716, 489);
+            this.ClientSize = new System.Drawing.Size(690, 489);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.pictureEdit1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
             this.Name = "FrmForgetPassword";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Şiftemi Unuttum";
+            this.Text = "Şifremi Unuttum";
             this.Load += new System.EventHandler(this.FrmForgetPassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();

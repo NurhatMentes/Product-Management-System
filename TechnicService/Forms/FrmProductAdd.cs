@@ -47,26 +47,33 @@ namespace TechnicService.Forms
         {
             if (txtAdd.Text != "" && txtbrand.Text !="" && txtPurchase.Text != "" && txtSalesPrice.Text != "" && txtStock.Text != "" && Convert.ToInt32(cbxCategory.EditValue)> 0)
             {
-                Products products = new Products();
-                products.CustomerId = Convert.ToInt32(cbxCustomer.EditValue.ToString());
-                products.Name = char.ToUpper(txtAdd.Text[0]) + txtAdd.Text.Substring(1);
-                products.Brand = char.ToUpper(txtbrand.Text[0]) + txtbrand.Text.Substring(1);
-                products.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
-                products.Purchase = Convert.ToDecimal(txtPurchase.Text);
-                products.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
-                products.stock = Convert.ToInt32(txtStock.Text);
-                products.BarcodeNo = txtBarcode.Text.ToUpper();
-                products.Status = Convert.ToInt32(txtStock.Text) > 0 ? true : false;
-                _entities.Products.Add(products);
-                _entities.SaveChanges();
-                MessageBox.Show("Ürün başarı ile eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                if (Convert.ToDecimal(txtPurchase.Text) < Convert.ToDecimal(txtSalesPrice.Text))
+                {
+                    Products products = new Products();
+                    products.CustomerId = Convert.ToInt32(cbxCustomer.EditValue.ToString());
+                    products.Name = char.ToUpper(txtAdd.Text[0]) + txtAdd.Text.Substring(1);
+                    products.Brand = char.ToUpper(txtbrand.Text[0]) + txtbrand.Text.Substring(1);
+                    products.CategoryId = Convert.ToInt32(cbxCategory.EditValue.ToString());
+                    products.Purchase = Convert.ToDecimal(txtPurchase.Text);
+                    products.SalesPrice = Convert.ToDecimal(txtSalesPrice.Text);
+                    products.stock = Convert.ToInt32(txtStock.Text);
+                    products.BarcodeNo = txtBarcode.Text.ToUpper();
+                    products.Status = Convert.ToInt32(txtStock.Text) > 0 ? true : false;
+                    _entities.Products.Add(products);
+                    _entities.SaveChanges();
+                    MessageBox.Show("Ürün başarı ile eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                txtAdd.Text = "";
-                txtbrand.Text = "";
-                txtBarcode.Text = "";
-                txtPurchase.Text = "";
-                txtSalesPrice.Text = "";
-                txtStock.Text = "";
+                    txtAdd.Text = "";
+                    txtbrand.Text = "";
+                    txtBarcode.Text = "";
+                    txtPurchase.Text = "";
+                    txtSalesPrice.Text = "";
+                    txtStock.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Satış fiyatını alış fiyatından düşük veremezsiniz.", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

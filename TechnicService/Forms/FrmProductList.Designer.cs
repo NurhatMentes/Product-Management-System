@@ -29,6 +29,7 @@ namespace TechnicService.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductList));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -45,6 +46,7 @@ namespace TechnicService.Forms
             this.lblStockCount = new DevExpress.XtraEditors.LabelControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.lblUsd = new DevExpress.XtraEditors.LabelControl();
+            this.btnRef = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -222,6 +224,16 @@ namespace TechnicService.Forms
             this.lblUsd.TabIndex = 86;
             this.lblUsd.Text = "labelControl4";
             // 
+            // btnRef
+            // 
+            this.btnRef.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnRef.Location = new System.Drawing.Point(740, 7);
+            this.btnRef.Name = "btnRef";
+            this.btnRef.Size = new System.Drawing.Size(80, 29);
+            this.btnRef.TabIndex = 87;
+            this.btnRef.Text = "Yenile";
+            this.btnRef.Click += new System.EventHandler(this.btnRef_Click);
+            // 
             // FrmProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,6 +241,7 @@ namespace TechnicService.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1924, 778);
+            this.Controls.Add(this.btnRef);
             this.Controls.Add(this.lblUsd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel3);
@@ -274,5 +287,6 @@ namespace TechnicService.Forms
         public DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.LabelControl lblUsd;
+        private DevExpress.XtraEditors.SimpleButton btnRef;
     }
 }

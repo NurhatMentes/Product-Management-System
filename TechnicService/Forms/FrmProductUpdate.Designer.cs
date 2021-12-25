@@ -88,7 +88,7 @@ namespace TechnicService.Forms
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(73, 340);
+            this.label8.Location = new System.Drawing.Point(72, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 24);
             this.label8.TabIndex = 45;
@@ -207,10 +207,11 @@ namespace TechnicService.Forms
             this.btnProductUpdate.Appearance.Options.UseFont = true;
             this.btnProductUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductUpdate.ImageOptions.Image")));
             this.btnProductUpdate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnProductUpdate.Location = new System.Drawing.Point(313, 500);
+            this.btnProductUpdate.Location = new System.Drawing.Point(224, 462);
             this.btnProductUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductUpdate.Name = "btnProductUpdate";
-            this.btnProductUpdate.Size = new System.Drawing.Size(508, 73);
+            this.btnProductUpdate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnProductUpdate.Size = new System.Drawing.Size(548, 65);
             this.btnProductUpdate.TabIndex = 47;
             this.btnProductUpdate.Text = "Güncelle";
             this.btnProductUpdate.Click += new System.EventHandler(this.btnProductUpdate_Click);
@@ -317,7 +318,7 @@ namespace TechnicService.Forms
             // 
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(67, 192);
+            this.pictureEdit1.Location = new System.Drawing.Point(67, 157);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
