@@ -28,6 +28,8 @@ namespace TechnicService
         {
             TechnicServiceEntities _entities = new TechnicServiceEntities();
             var mail = _entities.Users.Where(x=>x.Id==1).Select(x => x.Mail).FirstOrDefault();
+            var adminMail = _entities.Adminstrator.Where(x => x.Id == 1).Select(x => x.Mail).FirstOrDefault();
+            var adminMailPassword = _entities.Adminstrator.Where(x => x.Id == 1).Select(x => x.Password).FirstOrDefault();
             MailMessage ePosta = new MailMessage();
             ePosta.From = new MailAddress("starworkdestek@hotmail.com", "StarWork-IT");
             ePosta.Subject = "Güvenlik Kodu";
@@ -35,8 +37,8 @@ namespace TechnicService
             {
                 ePosta.To.Add(mail);
                 ePosta.Body = "Güvenliğiniz için kodu başkası ile paylaşmayınız.\n \n" + " Güvenlik Kodu: "+code;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Credentials = new System.Net.NetworkCredential("starworkdestek@hotmail.com", "kvasirstarwork2021");
+                SmtpClient smtp = new SmtpClient("domain-com.mail.protection.outlook.com");
+                smtp.Credentials = new System.Net.NetworkCredential(adminMail, adminMailPassword);
                 smtp.Port = 587;              // smtp 25 veya 587 portunu kullanır.
                 smtp.Host = "smtp-mail.outlook.com";  // gmail için: smtp.gmail.com, outlook için: smtp-mail.outlook.com
                 smtp.EnableSsl = true;       // true/false değerlerlerinden birini alır.

@@ -320,6 +320,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adminstrator.cs">
+      <DependentUpon>TechnicServiceDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>TechnicServiceDb.tt</DependentUpon>
     </Compile>

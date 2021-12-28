@@ -44,11 +44,13 @@ namespace TechnicService
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.lblForgetPassword = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // toolbarFormManager1
@@ -180,6 +182,17 @@ namespace TechnicService
             this.lblForgetPassword.Text = "Şifremi Unuttum";
             this.lblForgetPassword.Click += new System.EventHandler(this.lblForgetPassword_Click);
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(73, 203);
+            this.pictureEdit1.MenuManager = this.toolbarFormManager1;
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(100, 82);
+            this.pictureEdit1.TabIndex = 25;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -187,6 +200,7 @@ namespace TechnicService
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(1144, 703);
+            this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.lblForgetPassword);
             this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.btnLogin);
@@ -211,6 +225,7 @@ namespace TechnicService
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +245,6 @@ namespace TechnicService
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.LabelControl lblForgetPassword;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
     }
 }

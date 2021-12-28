@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="Db.MalfunctionUpdate" Width="1.5" PointX="8.125" PointY="1.75" />
         <AssociationConnector Association="Db.FK_Expenses_Products" />
         <AssociationConnector Association="Db.FK_Products_Customers" />
+        <EntityTypeShape EntityType="Db.Adminstrator" Width="1.5" PointX="6.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
